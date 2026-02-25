@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Partners"
+  description="MCLA partners with medical institutions, research organizations, and industry leaders to advance MCL care and research."
+>
+  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Our Partners</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">
+        Collaboration is at the heart of our work. We partner with leading institutions and organizations to advance MCL care and research.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-warm-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Partner Categories -->
+      <div class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-8">Medical & Research Partners</h2>
+        <p class="text-charcoal/60 mb-8">
+          We work closely with leading cancer centers and research institutions to ensure our information is accurate and our programs are impactful.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[1,2,3,4].map(() => (
+            <div class="bg-sage/30 rounded-xl p-8 flex items-center justify-center aspect-[3/2]">
+              <span class="text-charcoal/30 text-sm font-medium text-center">Partner Logo</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-8">Industry Partners</h2>
+        <p class="text-charcoal/60 mb-8">
+          Our industry partners provide support that enables our programs and accelerates our mission. All partnerships maintain editorial independence.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[1,2,3,4].map(() => (
+            <div class="bg-sage/30 rounded-xl p-8 flex items-center justify-center aspect-[3/2]">
+              <span class="text-charcoal/30 text-sm font-medium text-center">Partner Logo</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-8">Community Partners</h2>
+        <p class="text-charcoal/60 mb-8">
+          We collaborate with other patient organizations and community groups to extend our reach and serve more patients and families.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[1,2,3,4].map(() => (
+            <div class="bg-sage/30 rounded-xl p-8 flex items-center justify-center aspect-[3/2]">
+              <span class="text-charcoal/30 text-sm font-medium text-center">Partner Logo</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Become a Partner -->
+      <div class="bg-sage/30 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold text-charcoal mb-4">Become a Partner</h2>
+        <p class="text-charcoal/60 mb-6 max-w-2xl mx-auto">
+          We are always looking for organizations and individuals who share our commitment to improving outcomes for the MCL community. Let's explore how we can work together.
+        </p>
+        <a
+          href="/get-involved/partner"
+          class="inline-flex items-center px-7 py-3 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline"
+        >
+          Partner With Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

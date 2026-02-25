@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
+---
+
+<BaseLayout
+  title="Newly Diagnosed with MCL"
+  description="Just diagnosed with mantle cell lymphoma? Here's what you need to know — next steps, questions to ask your doctor, and resources to help."
+>
+  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Newly Diagnosed</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">
+        A diagnosis of MCL can feel overwhelming. You are not alone, and there are clear steps you can take.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-warm-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose max-w-none">
+        <div class="bg-teal-primary/5 rounded-2xl p-8 mb-12 border border-teal-primary/10">
+          <p class="text-lg text-charcoal/80 leading-relaxed mb-0">
+            <strong>Take a breath.</strong> A new diagnosis brings many emotions — shock, fear, confusion, even anger. These feelings are natural. Know that MCL treatment has advanced significantly, and many people live well with this disease for years. Your next step is to gather good information and build the right care team.
+          </p>
+        </div>
+
+        <h2>First Steps After Diagnosis</h2>
+        <ol class="text-charcoal/70 space-y-4">
+          <li>
+            <strong>Confirm your diagnosis.</strong> Make sure your biopsy has been reviewed by a pathologist experienced in lymphoma. MCL has a specific genetic marker — the t(11;14) translocation — that should be confirmed.
+          </li>
+          <li>
+            <strong>Seek a specialist.</strong> MCL is rare, and treatment approaches continue to evolve. We strongly recommend consulting with a hematologist-oncologist who has specific experience treating MCL, even if your primary treatment happens closer to home.
+          </li>
+          <li>
+            <strong>Understand your subtype.</strong> Ask your doctor about the specific characteristics of your MCL, including the Ki-67 index (a marker of how fast cells are growing) and whether your disease appears to be the classic or indolent variant. This information helps guide treatment decisions.
+          </li>
+          <li>
+            <strong>Complete staging tests.</strong> Your care team will likely order additional tests — imaging (CT or PET scan), blood work, and possibly a bone marrow biopsy — to determine the stage and extent of your disease.
+          </li>
+          <li>
+            <strong>Bring someone with you.</strong> Having a trusted family member or friend at your appointments can help you process information and remember details.
+          </li>
+        </ol>
+
+        <h2>Questions to Ask Your Doctor</h2>
+        <ul class="text-charcoal/70 space-y-2">
+          <li>What subtype of MCL do I have?</li>
+          <li>What is the stage of my disease?</li>
+          <li>What are my treatment options?</li>
+          <li>Would you recommend a second opinion from an MCL specialist?</li>
+          <li>Are there clinical trials I should consider?</li>
+          <li>What can I expect from treatment — timeline, side effects, follow-up?</li>
+          <li>How will we monitor for response and potential relapse?</li>
+        </ul>
+
+        <h2>Building Your Support Network</h2>
+        <p class="text-charcoal/70">
+          Living with MCL is not something you need to do alone. Consider connecting with:
+        </p>
+        <ul class="text-charcoal/70 space-y-2">
+          <li>A social worker or patient navigator at your treatment center</li>
+          <li>Other MCL patients through support groups or online communities</li>
+          <li>Caregiver support resources for your family members</li>
+          <li>Financial counseling services if treatment costs are a concern</li>
+        </ul>
+
+        <div class="bg-sage/30 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-charcoal mb-2">Helpful Resources</h3>
+          <ul class="text-charcoal/70 space-y-2 mb-0">
+            <li><a href="/understanding-mcl/treatment-options">Treatment options for MCL</a></li>
+            <li><a href="/understanding-mcl/find-specialist">Find an MCL specialist</a></li>
+            <li><a href="/understanding-mcl/caregiver-support">Resources for caregivers</a></li>
+            <li><a href="/contact">Contact MCLA for support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <MedicalDisclaimer />
+    </div>
+  </section>
+</BaseLayout>

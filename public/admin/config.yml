@@ -1,0 +1,73 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Research", "Patient Stories", "News", "Events"] }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "team"
+    label: "Team Members"
+    folder: "src/content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Role Type", name: "roleType", widget: "select", options: ["board", "advisory", "staff"] }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int" }
+
+  - name: "events"
+    label: "Events"
+    folder: "src/content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+
+  - name: "resources"
+    label: "Resources"
+    folder: "src/content/resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "File", name: "file", widget: "file" }
+      - { label: "Category", name: "category", widget: "select", options: ["Patient Guide", "Research", "Caregiver", "General"] }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Mission"
+        name: "mission"
+        file: "src/content/pages/mission.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "About"
+        name: "about"
+        file: "src/content/pages/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

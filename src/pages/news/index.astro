@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const categories = ['All', 'Research', 'Patient Stories', 'News', 'Events'];
+---
+
+<BaseLayout
+  title="News & Updates"
+  description="The latest news, research updates, patient stories, and events from the Mantle Cell Lymphoma Alliance."
+>
+  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">News & Updates</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">
+        Stay informed with the latest from the MCLA community.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-warm-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Category Filter -->
+      <div class="flex flex-wrap gap-2 mb-12" role="tablist" aria-label="Filter by category">
+        {categories.map((cat) => (
+          <button
+            class="category-filter px-4 py-2 text-sm font-medium rounded-full border transition-colors"
+            data-category={cat}
+            role="tab"
+            aria-selected={cat === 'All' ? 'true' : 'false'}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="posts-grid">
+        {posts.map((post) => (
+          <a
+            href={`/news/${post.id}`}
+            class="post-card group block bg-white rounded-2xl overflow-hidden border border-sage hover:shadow-lg transition-all duration-300 no-underline"
+            data-category={post.data.category}
+          >
+            <div class="aspect-[16/9] bg-gradient-to-br from-teal-primary/20 to-sage flex items-center justify-center">
+              <span class="text-teal-primary/40 text-sm font-medium">Featured Image</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block px-2.5 py-0.5 bg-teal-primary/10 text-teal-primary text-xs font-semibold rounded-full">
+                  {post.data.category}
+                </span>
+                <time class="text-charcoal/40 text-xs" datetime={new Date(post.data.date).toISOString()}>
+                  {new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                </time>
+              </div>
+              <h2 class="text-lg font-bold text-charcoal mb-2 group-hover:text-teal-primary transition-colors">{post.data.title}</h2>
+              <p class="text-charcoal/60 text-sm line-clamp-2">{post.data.excerpt}</p>
+              <div class="mt-4 text-teal-primary font-semibold text-sm">Read more &rarr;</div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <div class="text-center py-16">
+          <p class="text-charcoal/40 text-lg">No posts yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll('.category-filter');
+  const cards = document.querySelectorAll('.post-card');
+
+  function setActiveFilter(category: string) {
+    buttons.forEach((btn) => {
+      const isActive = btn.getAttribute('data-category') === category;
+      btn.classList.toggle('bg-teal-primary', isActive);
+      btn.classList.toggle('text-white', isActive);
+      btn.classList.toggle('border-teal-primary', isActive);
+      btn.classList.toggle('text-charcoal/60', !isActive);
+      btn.classList.toggle('border-sage-dark', !isActive);
+      btn.classList.toggle('hover:border-teal-primary', !isActive);
+      btn.setAttribute('aria-selected', String(isActive));
+    });
+
+    cards.forEach((card) => {
+      const cardCategory = card.getAttribute('data-category');
+      const show = category === 'All' || cardCategory === category;
+      (card as HTMLElement).style.display = show ? 'block' : 'none';
+    });
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category') || 'All';
+      setActiveFilter(category);
+    });
+  });
+
+  // Initialize
+  setActiveFilter('All');
+</script>

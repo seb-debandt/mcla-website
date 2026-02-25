@@ -1,0 +1,89 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'The Mantle Cell Lymphoma Alliance supports patients, caregivers, and researchers with trusted information, expert-guided support, and targeted research to advance better treatments and a cure.',
+  ogImage = '/og-default.png',
+  ogType = 'website',
+  canonicalUrl,
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = 'https://mantlecellalliance.org';
+const fullTitle = title === 'Home' ? 'MCLA — Mantle Cell Lymphoma Alliance' : `${title} | MCLA`;
+const canonical = canonicalUrl || new URL(Astro.url.pathname, siteUrl).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+    <!-- SEO -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:site_name" content="Mantle Cell Lymphoma Alliance" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NonprofitOrganization",
+      "name": "Mantle Cell Lymphoma Alliance",
+      "alternateName": "MCLA",
+      "url": siteUrl,
+      "logo": `${siteUrl}/favicon.svg`,
+      "description": description,
+      "nonprofitStatus": "501(c)(3)",
+      "areaServed": "United States",
+      "sameAs": []
+    })} />
+
+    <!-- Analytics Placeholder -->
+    <!-- Uncomment and configure one of the following: -->
+    <!-- Plausible: <script defer data-domain="mantlecellalliance.org" src="https://plausible.io/js/script.js"></script> -->
+    <!-- GA4: <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content" class="flex-1 pt-18 lg:pt-20">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
