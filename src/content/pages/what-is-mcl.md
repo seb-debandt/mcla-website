@@ -5,7 +5,7 @@ description: Learn about mantle cell lymphoma (MCL) — a rare type of non-Hodgk
   lymphoma, its causes, symptoms, diagnosis, and what makes it unique.
 showMedicalDisclaimer: true
 ---
-Mantle cell lymphoma (MCL) is a rare type of non‑Hodgkin lymphoma that starts in B lymphocytes in an area of the lymph node called the mantle zone and accounts for about 6% of all non‑Hodgkin lymphomas in the United States. <https://www.cancer.gov/types/lymphoma/hp/mantle-cell-lymphoma-treatment><https://lymphoma.org/researchers/scientificmeetings/mclscientificmeetings/> It is considered an uncommon lymphoma that often presents with disease in multiple lymph node areas and sometimes in the spleen, bone marrow, or digestive tract. <https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/>
+Mantle cell lymphoma (MCL) is a rare type of non‑Hodgkin lymphoma that starts in B lymphocytes in an area of the lymph node called the mantle zone and accounts for about 6% of all non‑Hodgkin lymphomas in the United States. [[cancer.gov](https://www.cancer.gov/types/lymphoma/hp/mantle-cell-lymphoma-treatmenthttps://lymphoma.org/researchers/scientificmeetings/mclscientificmeetings/)] It is considered an uncommon lymphoma that often presents with disease in multiple lymph node areas and sometimes in the spleen, bone marrow, or digestive tract. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/)]
 
 
 
