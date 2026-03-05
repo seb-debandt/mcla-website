@@ -4,19 +4,23 @@ interface Props {
   title: string;
   bio: string;
   roleType?: string;
+  photo?: string;
 }
 
-const { name, title, bio, roleType = 'staff' } = Astro.props;
+const { name, title, bio, roleType = 'staff', photo } = Astro.props;
 ---
 
 <div class="bg-white rounded-2xl border border-sage p-6 hover:shadow-md transition-shadow">
   <div class="flex items-start gap-5">
-    <!-- Photo placeholder -->
-    <div class="w-20 h-20 bg-gradient-to-br from-teal-primary/20 to-sage rounded-xl flex items-center justify-center shrink-0">
-      <span class="text-teal-primary font-bold text-xl font-serif">
-        {name.split(' ').map(n => n[0]).join('')}
-      </span>
-    </div>
+    {photo ? (
+      <img src={photo} alt={name} class="w-20 h-20 rounded-xl object-cover shrink-0" />
+    ) : (
+      <div class="w-20 h-20 bg-gradient-to-br from-teal-primary/20 to-sage rounded-xl flex items-center justify-center shrink-0">
+        <span class="text-teal-primary font-bold text-xl font-serif">
+          {name.split(' ').map(n => n[0]).join('')}
+        </span>
+      </div>
+    )}
     <div>
       <h3 class="text-lg font-bold text-charcoal">{name}</h3>
       <p class="text-teal-primary text-sm font-medium mb-2">{title}</p>
