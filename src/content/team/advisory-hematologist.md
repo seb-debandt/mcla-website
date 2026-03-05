@@ -16,5 +16,5 @@ bio: "Linda Trummer is a community builder, cancer‑advocate, and survivor who
   understanding that what we’ve had to learn the hard way can become a soft
   place for someone else to land."
 photo: /uploads/edit-the-uploaded-im-1-.png
-order: -14
+order: 4
 ---
