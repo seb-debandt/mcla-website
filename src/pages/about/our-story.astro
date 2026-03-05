@@ -1,58 +1,35 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'our-story');
+const { Content } = await render(page);
 ---
 
-<BaseLayout
-  title="Our Story"
-  description="Learn how the Mantle Cell Lymphoma Alliance was founded and our journey to support the MCL community."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Our Story</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        Born from personal experience. Built for the entire MCL community.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <p class="text-lg text-charcoal/70 leading-relaxed">
-        The Mantle Cell Lymphoma Alliance was born out of a deeply personal experience. When our founders first encountered an MCL diagnosis in their family, they found themselves navigating a landscape with limited resources specifically tailored to this rare cancer.
-      </p>
-
-      <p class="text-lg text-charcoal/70 leading-relaxed">
-        General cancer resources existed in abundance, but finding answers to the specific questions that MCL patients and caregivers face — about treatment approaches, specialist expertise, research progress, and long-term management — was far more challenging.
-      </p>
-
-      <div class="bg-sage/30 rounded-2xl p-8 my-12">
-        <p class="text-xl text-charcoal/80 font-serif leading-relaxed italic">
-          "We realized that if we — with access to good healthcare and a strong support network — struggled to find clear, reliable MCL-specific information, the challenge must be even greater for others."
-        </p>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <Content />
       </div>
 
-      <p class="text-lg text-charcoal/70 leading-relaxed">
-        That realization became the catalyst for MCLA. We set out to build something that didn't yet exist: a dedicated organization that combines trusted medical information, direct connections to MCL expertise, support for targeted research, and a sense of community for everyone touched by this disease.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-bold text-charcoal pt-8">Where We're Headed</h2>
-
-      <p class="text-lg text-charcoal/70 leading-relaxed">
-        We are in the early stages of building MCLA, but our ambitions are clear. We are developing partnerships with leading medical institutions, creating educational programs for patients and caregivers, establishing a research grants program, and building a platform where the MCL community can connect and support one another.
-      </p>
-
-      <p class="text-lg text-charcoal/70 leading-relaxed">
-        We believe that progress against MCL requires collaboration — between patients and their care teams, between researchers across institutions, and between those facing this disease and those working to advance treatments. MCLA exists to make those connections happen.
-      </p>
-
-      <div class="pt-8">
-        <a
-          href="/get-involved"
-          class="inline-flex items-center px-7 py-3.5 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline"
-        >
-          Join Our Mission
-        </a>
-      </div>
+      {page.data.ctaText && page.data.ctaUrl && (
+        <div class="pt-8">
+          <a
+            href={page.data.ctaUrl}
+            class="inline-flex items-center px-7 py-3.5 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline"
+          >
+            {page.data.ctaText}
+          </a>
+        </div>
+      )}
     </div>
   </section>
 </BaseLayout>

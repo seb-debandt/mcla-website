@@ -1,65 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'contact');
 ---
 
-<BaseLayout
-  title="Contact Us"
-  description="Get in touch with the Mantle Cell Lymphoma Alliance. We're here to help with questions, resources, partnerships, and support."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Contact Us</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        We'd love to hear from you. Whether you have questions, need resources, or want to get involved — reach out.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
-        <!-- Form -->
         <div class="lg:col-span-3">
           <ContactForm />
         </div>
 
-        <!-- Contact Info -->
         <div class="lg:col-span-2 space-y-8">
           <div class="bg-sage/30 rounded-2xl p-6">
             <h3 class="text-lg font-bold text-charcoal mb-4">Get in Touch</h3>
             <div class="space-y-4">
-              <div>
-                <p class="text-sm font-medium text-charcoal">General Inquiries</p>
-                <a href="mailto:info@mantlecellalliance.org" class="text-teal-primary text-sm no-underline">info@mantlecellalliance.org</a>
-              </div>
-              <div>
-                <p class="text-sm font-medium text-charcoal">Donation Questions</p>
-                <a href="mailto:donate@mantlecellalliance.org" class="text-teal-primary text-sm no-underline">donate@mantlecellalliance.org</a>
-              </div>
-              <div>
-                <p class="text-sm font-medium text-charcoal">Research & Partnerships</p>
-                <a href="mailto:research@mantlecellalliance.org" class="text-teal-primary text-sm no-underline">research@mantlecellalliance.org</a>
-              </div>
-              <div>
-                <p class="text-sm font-medium text-charcoal">Media Inquiries</p>
-                <a href="mailto:media@mantlecellalliance.org" class="text-teal-primary text-sm no-underline">media@mantlecellalliance.org</a>
-              </div>
+              {page.data.contacts.map((contact: { label: string; email: string }) => (
+                <div>
+                  <p class="text-sm font-medium text-charcoal">{contact.label}</p>
+                  <a href={`mailto:${contact.email}`} class="text-teal-primary text-sm no-underline">{contact.email}</a>
+                </div>
+              ))}
             </div>
           </div>
 
           <div class="bg-white rounded-2xl border border-sage p-6">
             <h3 class="text-lg font-bold text-charcoal mb-4">Response Time</h3>
-            <p class="text-charcoal/60 text-sm leading-relaxed">
-              We aim to respond to all inquiries within 1-2 business days. For urgent patient resource needs, please indicate this in your message.
-            </p>
+            <p class="text-charcoal/60 text-sm leading-relaxed">{page.data.responseTime}</p>
           </div>
 
           <div class="bg-white rounded-2xl border border-sage p-6">
             <h3 class="text-lg font-bold text-charcoal mb-4">Important Note</h3>
-            <p class="text-charcoal/60 text-sm leading-relaxed">
-              MCLA does not provide medical advice. If you have questions about your diagnosis or treatment, please contact your healthcare provider. For medical emergencies, call 911.
-            </p>
+            <p class="text-charcoal/60 text-sm leading-relaxed">{page.data.importantNote}</p>
           </div>
         </div>
       </div>

@@ -59,15 +59,264 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Mission"
+      # ── Home ──
+      - label: "Home"
+        name: "home"
+        file: "src/content/pages/home.md"
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "Home" }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Highlighted Text", name: "heroHighlight", widget: "string" }
+          - { label: "Hero Description", name: "heroDescription", widget: "text" }
+          - { label: "Primary Button Text", name: "heroPrimaryText", widget: "string" }
+          - { label: "Primary Button URL", name: "heroPrimaryUrl", widget: "string" }
+          - { label: "Secondary Button Text", name: "heroSecondaryText", widget: "string" }
+          - { label: "Secondary Button URL", name: "heroSecondaryUrl", widget: "string" }
+          - { label: "Mission Statement", name: "missionStatement", widget: "text" }
+          - { label: "Pillars Heading", name: "pillarsHeading", widget: "string" }
+          - { label: "Pillars Subheading", name: "pillarsSubheading", widget: "string" }
+          - label: "Pillars"
+            name: "pillars"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "href", widget: "string" }
+          - { label: "Stats Heading", name: "statsHeading", widget: "string" }
+          - { label: "Stats Subheading", name: "statsSubheading", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "Stats Source", name: "statsSource", widget: "text" }
+
+      # ── About ──
+      - label: "Mission & Values"
         name: "mission"
         file: "src/content/pages/mission.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - label: "About"
-        name: "about"
-        file: "src/content/pages/about.md"
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Mission Statement", name: "missionStatement", widget: "text" }
+          - { label: "Vision", name: "vision", widget: "text" }
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - label: "Our Story"
+        name: "our-story"
+        file: "src/content/pages/our-story.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
+
+      # ── Understanding MCL ──
+      - label: "What Is MCL"
+        name: "what-is-mcl"
+        file: "src/content/pages/what-is-mcl.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Newly Diagnosed"
+        name: "newly-diagnosed"
+        file: "src/content/pages/newly-diagnosed.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
+          - { label: "Callout Box", name: "callout", widget: "text", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Treatment Options"
+        name: "treatment-options"
+        file: "src/content/pages/treatment-options.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Find a Specialist"
+        name: "find-specialist"
+        file: "src/content/pages/find-specialist.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
+          - { label: "Callout Box", name: "callout", widget: "text", required: false }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Caregiver Support"
+        name: "caregiver-support"
+        file: "src/content/pages/caregiver-support.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
+          - label: "Resources"
+            name: "resources"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      # ── Research ──
+      - label: "Research"
+        name: "research"
+        file: "src/content/pages/research.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - label: "Research Areas"
+            name: "researchAreas"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "CTA Links"
+            name: "ctaLinks"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "URL", name: "url", widget: "string" }
+
+      - label: "Research Priorities"
+        name: "research-priorities"
+        file: "src/content/pages/research-priorities.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
+          - { label: "CTA Style", name: "ctaStyle", widget: "select", options: ["teal", "coral"], default: "teal", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "For Researchers"
+        name: "for-researchers"
+        file: "src/content/pages/for-researchers.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      # ── Get Involved ──
+      - label: "Get Involved"
+        name: "get-involved"
+        file: "src/content/pages/get-involved.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - label: "Ways to Help"
+            name: "ways"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Page URL", name: "url", widget: "string", required: false }
+              - { label: "Contact URL", name: "contactUrl", widget: "string", required: false }
+              - { label: "Contact Text", name: "contactText", widget: "string", required: false }
+
+      - label: "Volunteer"
+        name: "volunteer"
+        file: "src/content/pages/volunteer.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
+          - label: "Volunteer Roles"
+            name: "volunteerRoles"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Role Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Partner With Us"
+        name: "partner"
+        file: "src/content/pages/partner.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
+          - { label: "CTA Button URL", name: "ctaUrl", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      # ── Contact & Donate ──
+      - label: "Contact"
+        name: "contact"
+        file: "src/content/pages/contact.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - label: "Contact Channels"
+            name: "contacts"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - { label: "Response Time", name: "responseTime", widget: "text" }
+          - { label: "Important Note", name: "importantNote", widget: "text" }
+
+      - label: "Donate"
+        name: "donate"
+        file: "src/content/pages/donate.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - label: "Donation Amounts"
+            name: "amounts"
+            widget: "list"
+            fields:
+              - { label: "Value ($)", name: "value", widget: "number", value_type: "int" }
+              - { label: "Impact Text", name: "impact", widget: "string" }
+          - { label: "Why Your Gift Matters", name: "whyGiftMatters", widget: "text" }
+          - label: "Impact Areas"
+            name: "impactAreas"
+            widget: "list"
+            field: { label: "Area", name: "area", widget: "string" }
+          - label: "Other Ways to Give"
+            name: "otherWays"
+            widget: "list"
+            fields:
+              - { label: "Method", name: "method", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Donate Email", name: "donateEmail", widget: "string" }

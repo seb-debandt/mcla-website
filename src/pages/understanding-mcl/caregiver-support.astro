@@ -1,95 +1,53 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'caregiver-support');
+const { Content } = await render(page);
 ---
 
-<BaseLayout
-  title="Caregiver Support"
-  description="Resources and guidance for caregivers of mantle cell lymphoma patients — practical tips, emotional support, and self-care strategies."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Caregiver Support</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        Caring for someone with MCL is a journey. Here's how to support your loved one — and yourself.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose max-w-none">
-        <p class="text-lg text-charcoal/70 leading-relaxed">
-          As a caregiver to someone with MCL, you play an essential role in their care and wellbeing. But caregiving can be demanding — physically, emotionally, and practically. You deserve support too.
-        </p>
+        <Content />
+      </div>
 
-        <h2>Your Role as a Caregiver</h2>
-        <p class="text-charcoal/70">
-          Caregivers often take on many roles: advocate, organizer, emotional support, researcher, and more. Common responsibilities include:
-        </p>
-        <ul class="text-charcoal/70 space-y-2">
-          <li>Attending medical appointments and helping track treatment plans</li>
-          <li>Managing medications and side effects</li>
-          <li>Coordinating with the care team and insurance</li>
-          <li>Providing emotional support and companionship</li>
-          <li>Managing household responsibilities</li>
-        </ul>
-
-        <h2>Practical Tips</h2>
-        <ul class="text-charcoal/70 space-y-3">
-          <li><strong>Stay organized:</strong> Keep a binder or digital folder with medical records, test results, medication lists, and appointment schedules.</li>
-          <li><strong>Take notes:</strong> Bring a notebook to appointments and write down key information. Don't hesitate to ask the care team to repeat or clarify.</li>
-          <li><strong>Accept help:</strong> When friends and family offer support, let them help with meals, errands, or companionship.</li>
-          <li><strong>Communicate with the care team:</strong> Don't be afraid to ask questions or raise concerns. You know your loved one best.</li>
-          <li><strong>Plan ahead:</strong> Talk with your loved one about preferences, advance directives, and financial planning when they feel well enough for those conversations.</li>
-        </ul>
-
-        <h2>Taking Care of Yourself</h2>
-        <p class="text-charcoal/70">
-          Caregiver burnout is real and common. Prioritizing your own health isn't selfish — it's necessary.
-        </p>
-        <ul class="text-charcoal/70 space-y-3">
-          <li><strong>Maintain your health:</strong> Keep up with your own medical appointments, exercise, and sleep.</li>
-          <li><strong>Seek emotional support:</strong> Talk to friends, family, a therapist, or a caregiver support group. Processing your feelings is important.</li>
-          <li><strong>Take breaks:</strong> Even short breaks can help you recharge. Ask someone to step in so you can have time for yourself.</li>
-          <li><strong>Set boundaries:</strong> It's okay to say no or to delegate. You cannot do everything.</li>
-        </ul>
-
-        <h2>Caregiver Resources</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-8">
-          <div class="bg-sage/30 rounded-xl p-5">
-            <h3 class="text-base font-bold text-charcoal mb-2">Support Groups</h3>
-            <p class="text-charcoal/60 text-sm">Connect with other MCL caregivers who understand your experience.</p>
-          </div>
-          <div class="bg-sage/30 rounded-xl p-5">
-            <h3 class="text-base font-bold text-charcoal mb-2">Financial Assistance</h3>
-            <p class="text-charcoal/60 text-sm">Programs that can help with treatment costs, transportation, and other expenses.</p>
-          </div>
-          <div class="bg-sage/30 rounded-xl p-5">
-            <h3 class="text-base font-bold text-charcoal mb-2">Mental Health</h3>
-            <p class="text-charcoal/60 text-sm">Counseling and therapy resources for caregivers managing stress and anxiety.</p>
-          </div>
-          <div class="bg-sage/30 rounded-xl p-5">
-            <h3 class="text-base font-bold text-charcoal mb-2">Respite Care</h3>
-            <p class="text-charcoal/60 text-sm">Temporary relief services so caregivers can take necessary breaks.</p>
-          </div>
+      {page.data.resources && (
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+          {page.data.resources.map((resource: { name: string; description: string }) => (
+            <div class="bg-sage/30 rounded-xl p-5">
+              <h3 class="text-base font-bold text-charcoal mb-2">{resource.name}</h3>
+              <p class="text-charcoal/60 text-sm">{resource.description}</p>
+            </div>
+          ))}
         </div>
+      )}
 
+      {page.data.ctaText && page.data.ctaUrl && (
         <div class="bg-sage/30 rounded-xl p-6 my-8">
           <h3 class="text-lg font-bold text-charcoal mb-3">We're Here for You</h3>
           <p class="text-charcoal/70 mb-4">
             MCLA is building resources specifically for caregivers. If you need support or have questions, please reach out.
           </p>
           <a
-            href="/contact"
+            href={page.data.ctaUrl}
             class="inline-flex items-center px-6 py-2.5 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline text-sm"
           >
-            Contact Us
+            {page.data.ctaText}
           </a>
         </div>
-      </div>
+      )}
 
-      <MedicalDisclaimer />
+      {page.data.showMedicalDisclaimer && <MedicalDisclaimer />}
     </div>
   </section>
 </BaseLayout>

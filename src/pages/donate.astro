@@ -1,88 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
 
-const amounts = [
-  { value: 25, impact: 'Helps share educational materials with newly diagnosed patients' },
-  { value: 50, impact: 'Helps fund patient education materials and caregiver guides' },
-  { value: 100, impact: 'Supports MCL awareness initiatives and community outreach' },
-  { value: 250, impact: 'Contributes to research grants and clinical trial education' },
-  { value: 500, impact: 'Funds specialist consultations for underserved patients' },
-];
+const page = await getEntry('pages', 'donate');
+const amounts = page.data.amounts;
 ---
 
-<BaseLayout
-  title="Donate — Your Impact Starts Here"
-  description="Support the Mantle Cell Lymphoma Alliance. Your tax-deductible donation funds research, patient education, and support programs."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-coral/5 via-warm-white to-gold/5">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Your Impact Starts Here</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        Every gift — no matter the size — brings us closer to better treatments and a cure for mantle cell lymphoma.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
-        <!-- Donation Form -->
         <div class="lg:col-span-3">
           <div class="bg-white rounded-2xl border border-sage p-6 md:p-8">
-            <!-- Frequency Toggle -->
             <div class="flex bg-sage/50 rounded-lg p-1 mb-8">
-              <button
-                id="one-time-btn"
-                class="flex-1 py-2.5 text-sm font-semibold rounded-md bg-white text-charcoal shadow-sm transition-all"
-                data-frequency="one-time"
-              >
-                One-Time
-              </button>
-              <button
-                id="monthly-btn"
-                class="flex-1 py-2.5 text-sm font-semibold rounded-md text-charcoal/60 transition-all"
-                data-frequency="monthly"
-              >
-                Monthly
-              </button>
+              <button id="one-time-btn" class="flex-1 py-2.5 text-sm font-semibold rounded-md bg-white text-charcoal shadow-sm transition-all" data-frequency="one-time">One-Time</button>
+              <button id="monthly-btn" class="flex-1 py-2.5 text-sm font-semibold rounded-md text-charcoal/60 transition-all" data-frequency="monthly">Monthly</button>
             </div>
 
-            <!-- Amount Selection -->
             <div class="mb-8">
               <label class="block text-sm font-medium text-charcoal mb-3">Select an amount</label>
               <div class="grid grid-cols-3 gap-3 mb-4">
-                {amounts.map((amt) => (
-                  <button
-                    class="amount-btn py-3 text-center border-2 border-sage rounded-lg font-semibold text-charcoal hover:border-teal-primary hover:text-teal-primary transition-colors"
-                    data-amount={amt.value}
-                  >
-                    ${amt.value}
-                  </button>
+                {amounts.map((amt: { value: number; impact: string }) => (
+                  <button class="amount-btn py-3 text-center border-2 border-sage rounded-lg font-semibold text-charcoal hover:border-teal-primary hover:text-teal-primary transition-colors" data-amount={amt.value} data-impact={amt.impact}>${amt.value}</button>
                 ))}
-                <button
-                  class="amount-btn py-3 text-center border-2 border-sage rounded-lg font-semibold text-charcoal hover:border-teal-primary hover:text-teal-primary transition-colors"
-                  data-amount="other"
-                >
-                  Other
-                </button>
+                <button class="amount-btn py-3 text-center border-2 border-sage rounded-lg font-semibold text-charcoal hover:border-teal-primary hover:text-teal-primary transition-colors" data-amount="other">Other</button>
               </div>
               <div id="custom-amount-wrapper" class="hidden">
                 <label for="custom-amount" class="sr-only">Custom amount</label>
                 <div class="relative">
                   <span class="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/50 font-semibold">$</span>
-                  <input
-                    type="number"
-                    id="custom-amount"
-                    min="1"
-                    placeholder="Enter amount"
-                    class="w-full pl-8 pr-4 py-3 border border-sage-dark rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent"
-                  />
+                  <input type="number" id="custom-amount" min="1" placeholder="Enter amount" class="w-full pl-8 pr-4 py-3 border border-sage-dark rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent" />
                 </div>
               </div>
               <p id="impact-text" class="text-sm text-charcoal/50 mt-3 italic"></p>
             </div>
 
-            <!-- Memorial/Honorary -->
             <div class="mb-8">
               <label class="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" id="tribute-checkbox" class="w-4 h-4 rounded border-sage-dark text-teal-primary focus:ring-teal-primary" />
@@ -101,28 +60,18 @@ const amounts = [
                 </div>
                 <div>
                   <label for="tribute-name" class="block text-sm font-medium text-charcoal mb-1.5">Name</label>
-                  <input
-                    type="text"
-                    id="tribute-name"
-                    placeholder="Honoree's name"
-                    class="w-full px-4 py-3 border border-sage-dark rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent"
-                  />
+                  <input type="text" id="tribute-name" placeholder="Honoree's name" class="w-full px-4 py-3 border border-sage-dark rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent" />
                 </div>
               </div>
             </div>
 
-            <!-- Donate Button -->
-            <button
-              id="donate-btn"
-              class="w-full py-4 bg-coral hover:bg-coral-dark text-white font-bold text-lg rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
+            <button id="donate-btn" class="w-full py-4 bg-coral hover:bg-coral-dark text-white font-bold text-lg rounded-lg transition-colors flex items-center justify-center gap-2">
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Donate Now
             </button>
 
-            <!-- Trust Signals -->
             <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-charcoal/40">
               <span class="flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -135,46 +84,32 @@ const amounts = [
           </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="lg:col-span-2 space-y-8">
           <div class="bg-sage/30 rounded-2xl p-6">
             <h3 class="text-lg font-bold text-charcoal mb-4">Why Your Gift Matters</h3>
-            <p class="text-charcoal/60 text-sm leading-relaxed mb-4">
-              MCL is rare, which means it receives less funding and attention than more common cancers. Your donation directly supports:
-            </p>
+            <p class="text-charcoal/60 text-sm leading-relaxed mb-4">{page.data.whyGiftMatters}</p>
             <ul class="text-charcoal/60 text-sm space-y-2">
-              <li class="flex items-start gap-2">
-                <svg class="w-4 h-4 text-teal-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
-                Targeted MCL research grants
-              </li>
-              <li class="flex items-start gap-2">
-                <svg class="w-4 h-4 text-teal-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
-                Patient education and support programs
-              </li>
-              <li class="flex items-start gap-2">
-                <svg class="w-4 h-4 text-teal-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
-                Specialist access programs
-              </li>
-              <li class="flex items-start gap-2">
-                <svg class="w-4 h-4 text-teal-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
-                Clinical trial awareness
-              </li>
+              {page.data.impactAreas.map((area: string) => (
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-teal-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                  {area}
+                </li>
+              ))}
             </ul>
           </div>
 
           <div class="bg-white rounded-2xl border border-sage p-6">
             <h3 class="text-lg font-bold text-charcoal mb-3">Other Ways to Give</h3>
             <ul class="text-charcoal/60 text-sm space-y-3">
-              <li><strong>Check:</strong> Mail to MCLA at our mailing address</li>
-              <li><strong>Stock/Securities:</strong> Contact us for transfer instructions</li>
-              <li><strong>DAF:</strong> Recommend a grant from your Donor Advised Fund</li>
-              <li><strong>Employer Match:</strong> Double your impact through your company's matching gift program</li>
+              {page.data.otherWays.map((way: { method: string; description: string }) => (
+                <li><strong>{way.method}:</strong> {way.description}</li>
+              ))}
             </ul>
           </div>
 
           <p class="text-xs text-charcoal/40 text-center">
             Questions about giving? Contact us at<br />
-            <a href="mailto:donate@mantlecellalliance.org" class="text-teal-primary no-underline">donate@mantlecellalliance.org</a>
+            <a href={`mailto:${page.data.donateEmail}`} class="text-teal-primary no-underline">{page.data.donateEmail}</a>
           </p>
         </div>
       </div>
@@ -183,15 +118,14 @@ const amounts = [
 </BaseLayout>
 
 <script>
-  const impacts: Record<string, string> = {
-    '25': 'Helps share educational materials with newly diagnosed patients',
-    '50': 'Helps fund patient education materials and caregiver guides',
-    '100': 'Supports MCL awareness initiatives and community outreach',
-    '250': 'Contributes to research grants and clinical trial education',
-    '500': 'Funds specialist consultations for underserved patients',
-  };
+  const impactsEl = document.getElementById('impact-data');
+  const impacts: Record<string, string> = {};
+  document.querySelectorAll('.amount-btn[data-amount]').forEach(btn => {
+    const val = btn.getAttribute('data-amount');
+    const impact = btn.getAttribute('data-impact');
+    if (val && impact) impacts[val] = impact;
+  });
 
-  // Amount buttons
   const amountBtns = document.querySelectorAll('.amount-btn');
   const customWrapper = document.getElementById('custom-amount-wrapper');
   const impactText = document.getElementById('impact-text');
@@ -221,7 +155,6 @@ const amounts = [
     });
   });
 
-  // Frequency toggle
   const oneTimeBtn = document.getElementById('one-time-btn');
   const monthlyBtn = document.getElementById('monthly-btn');
   let frequency = 'one-time';
@@ -242,14 +175,12 @@ const amounts = [
     oneTimeBtn?.classList.add('text-charcoal/60');
   });
 
-  // Tribute toggle
   const tributeCheckbox = document.getElementById('tribute-checkbox') as HTMLInputElement;
   const tributeFields = document.getElementById('tribute-fields');
   tributeCheckbox?.addEventListener('change', () => {
     tributeFields?.classList.toggle('hidden', !tributeCheckbox.checked);
   });
 
-  // Donate button
   const donateBtn = document.getElementById('donate-btn');
   donateBtn?.addEventListener('click', async () => {
     const customInput = document.getElementById('custom-amount') as HTMLInputElement;
@@ -260,7 +191,6 @@ const amounts = [
       return;
     }
 
-    // Placeholder: In production, this would call your Stripe checkout endpoint
     alert(`Thank you! This would redirect to Stripe checkout for a ${frequency} donation of $${amount}. Configure your Stripe keys to enable live payments.`);
   });
 </script>

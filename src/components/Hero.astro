@@ -1,4 +1,15 @@
 ---
+interface Props {
+  title: string;
+  highlight: string;
+  description: string;
+  primaryText: string;
+  primaryUrl: string;
+  secondaryText: string;
+  secondaryUrl: string;
+}
+
+const { title, highlight, description, primaryText, primaryUrl, secondaryText, secondaryUrl } = Astro.props;
 ---
 <section class="relative overflow-hidden bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/30 py-20 md:py-28 lg:py-36">
   <!-- Subtle decorative shapes -->
@@ -8,24 +19,24 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="max-w-3xl">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.1] mb-6">
-        Advancing hope for those facing
-        <span class="text-teal-primary">mantle cell lymphoma.</span>
+        {title}
+        <span class="text-teal-primary">{highlight}</span>
       </h1>
       <p class="text-lg md:text-xl text-charcoal/70 leading-relaxed mb-10 max-w-2xl">
-        We connect patients, caregivers, and researchers with trusted information, expert-guided support, and the research needed to improve outcomes.
+        {description}
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a
-          href="/understanding-mcl/what-is-mcl"
+          href={primaryUrl}
           class="inline-flex items-center justify-center px-7 py-3.5 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline text-base"
         >
-          Learn About MCL
+          {primaryText}
         </a>
         <a
-          href="/donate"
+          href={secondaryUrl}
           class="inline-flex items-center justify-center px-7 py-3.5 border-2 border-coral text-coral font-semibold rounded-lg hover:bg-coral hover:text-white transition-colors no-underline text-base"
         >
-          Support Our Mission
+          {secondaryText}
         </a>
       </div>
     </div>

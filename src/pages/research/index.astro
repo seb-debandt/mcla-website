@@ -1,89 +1,50 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'research');
+
+const icons = ['flask', 'chart', 'users', 'book'];
 ---
 
-<BaseLayout
-  title="Research"
-  description="MCLA supports targeted research to advance better treatments and a cure for mantle cell lymphoma. Learn about our research priorities and programs."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Research</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        Supporting the science that will transform MCL outcomes.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mb-16">
-        <p class="text-lg text-charcoal/70 leading-relaxed">
-          Research is the engine of progress against mantle cell lymphoma. MCLA is committed to supporting targeted research that moves us closer to better treatments, longer remissions, and ultimately a cure. We fund, facilitate, and advocate for research that addresses the most pressing questions facing the MCL community.
-        </p>
+        <p class="text-lg text-charcoal/70 leading-relaxed">{page.data.intro}</p>
       </div>
 
-      <!-- Research Areas -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        <div class="bg-white rounded-2xl border border-sage p-8">
-          <div class="w-12 h-12 bg-teal-primary/10 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-            </svg>
+        {page.data.researchAreas.map((area: { name: string; description: string }, i: number) => (
+          <div class="bg-white rounded-2xl border border-sage p-8">
+            <div class="w-12 h-12 bg-teal-primary/10 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                {i === 0 && <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />}
+                {i === 1 && <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />}
+                {i === 2 && <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />}
+                {i === 3 && <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />}
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">{area.name}</h3>
+            <p class="text-charcoal/60 text-[15px] leading-relaxed">{area.description}</p>
           </div>
-          <h3 class="text-xl font-bold text-charcoal mb-3">Translational Research</h3>
-          <p class="text-charcoal/60 text-[15px] leading-relaxed">
-            Bridging the gap between laboratory discoveries and clinical practice — turning scientific insights into treatments that help patients.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl border border-sage p-8">
-          <div class="w-12 h-12 bg-teal-primary/10 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-charcoal mb-3">Clinical Trials</h3>
-          <p class="text-charcoal/60 text-[15px] leading-relaxed">
-            Supporting clinical trial enrollment and education so more patients can access promising new treatments.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl border border-sage p-8">
-          <div class="w-12 h-12 bg-teal-primary/10 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-charcoal mb-3">Collaborative Networks</h3>
-          <p class="text-charcoal/60 text-[15px] leading-relaxed">
-            Building connections between researchers, clinicians, and institutions to accelerate discovery and share knowledge.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl border border-sage p-8">
-          <div class="w-12 h-12 bg-teal-primary/10 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-6 h-6 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-charcoal mb-3">Patient-Reported Outcomes</h3>
-          <p class="text-charcoal/60 text-[15px] leading-relaxed">
-            Advocating for research that measures what matters most to patients — quality of life, symptom burden, and real-world treatment experiences.
-          </p>
-        </div>
+        ))}
       </div>
 
-      <!-- CTA -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="/research/priorities" class="block bg-sage/30 rounded-2xl p-8 hover:bg-sage/50 transition-colors no-underline">
-          <h3 class="text-xl font-bold text-charcoal mb-2">Our Research Priorities</h3>
-          <p class="text-charcoal/60 text-sm">Learn about the specific areas where MCLA is focusing research support.</p>
-        </a>
-        <a href="/research/for-researchers" class="block bg-sage/30 rounded-2xl p-8 hover:bg-sage/50 transition-colors no-underline">
-          <h3 class="text-xl font-bold text-charcoal mb-2">For Researchers</h3>
-          <p class="text-charcoal/60 text-sm">Information about partnership opportunities and research collaboration.</p>
-        </a>
+        {page.data.ctaLinks.map((link: { title: string; description: string; url: string }) => (
+          <a href={link.url} class="block bg-sage/30 rounded-2xl p-8 hover:bg-sage/50 transition-colors no-underline">
+            <h3 class="text-xl font-bold text-charcoal mb-2">{link.title}</h3>
+            <p class="text-charcoal/60 text-sm">{link.description}</p>
+          </a>
+        ))}
       </div>
     </div>
   </section>

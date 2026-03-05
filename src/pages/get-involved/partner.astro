@@ -1,77 +1,38 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'partner');
+const { Content } = await render(page);
 ---
 
-<BaseLayout
-  title="Partner With Us"
-  description="Partner with MCLA to advance MCL care and research. Medical institutions, research organizations, and corporate partners welcome."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Partner With Us</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        Together, we can accelerate progress for the MCL community.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose max-w-none">
-        <p class="text-lg text-charcoal/70 leading-relaxed">
-          MCLA believes that meaningful progress against MCL requires collaboration. We welcome partnerships with medical institutions, research organizations, pharmaceutical companies, and other nonprofits who share our commitment to improving outcomes for MCL patients.
-        </p>
-
-        <h2>Partnership Opportunities</h2>
-
-        <h3>Medical & Research Institutions</h3>
-        <ul class="text-charcoal/70 space-y-2">
-          <li>Collaborate on patient education programs</li>
-          <li>Partner on research initiatives and clinical trial awareness</li>
-          <li>Contribute medical expertise to our content review process</li>
-          <li>Co-host educational events and webinars</li>
-        </ul>
-
-        <h3>Industry Partners</h3>
-        <ul class="text-charcoal/70 space-y-2">
-          <li>Support educational programs through grants</li>
-          <li>Sponsor awareness campaigns and events</li>
-          <li>Collaborate on clinical trial education and access initiatives</li>
-          <li>Provide unrestricted educational grants</li>
-        </ul>
-
-        <h3>Nonprofit & Community Organizations</h3>
-        <ul class="text-charcoal/70 space-y-2">
-          <li>Co-develop patient support programs</li>
-          <li>Share resources and best practices</li>
-          <li>Cross-promote events and initiatives</li>
-          <li>Collaborate on advocacy efforts</li>
-        </ul>
-
-        <h2>Our Partnership Principles</h2>
-        <p class="text-charcoal/70">
-          All MCLA partnerships are guided by:
-        </p>
-        <ul class="text-charcoal/70 space-y-2">
-          <li><strong>Editorial independence:</strong> MCLA maintains full editorial control over all content and programs.</li>
-          <li><strong>Transparency:</strong> We publicly disclose all partnerships and funding sources.</li>
-          <li><strong>Patient focus:</strong> Every partnership must ultimately benefit MCL patients and caregivers.</li>
-          <li><strong>Evidence-based:</strong> All supported programs and content are grounded in current medical evidence.</li>
-        </ul>
-
+        <Content />
+      </div>
+      {page.data.ctaText && page.data.ctaUrl && (
         <div class="bg-sage/30 rounded-xl p-6 my-8">
           <h3 class="text-lg font-bold text-charcoal mb-3">Let's Talk</h3>
           <p class="text-charcoal/70 mb-4">
             Interested in partnering with MCLA? We'd love to hear from you. Contact us to discuss how we can work together.
           </p>
           <a
-            href="/contact"
+            href={page.data.ctaUrl}
             class="inline-flex items-center px-6 py-2.5 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline text-sm"
           >
-            Contact Us About Partnerships
+            {page.data.ctaText}
           </a>
         </div>
-      </div>
+      )}
     </div>
   </section>
 </BaseLayout>

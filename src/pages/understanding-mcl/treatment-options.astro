@@ -1,80 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'treatment-options');
+const { Content } = await render(page);
 ---
 
-<BaseLayout
-  title="MCL Treatment Options"
-  description="An overview of current treatment options for mantle cell lymphoma, including chemotherapy, targeted therapy, immunotherapy, and stem cell transplantation."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Treatment Options</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        The treatment landscape for MCL has evolved significantly. Here's an overview of current approaches.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose max-w-none">
-        <p class="text-lg text-charcoal/70 leading-relaxed">
-          Treatment for mantle cell lymphoma depends on many factors, including the subtype and stage of disease, the patient's age and overall health, and individual treatment goals. The following is a general overview of current treatment categories — your care team will recommend the best approach for your specific situation.
-        </p>
-
-        <h2>Chemotherapy and Immunotherapy</h2>
-        <p class="text-charcoal/70">
-          Chemotherapy, often combined with the anti-CD20 antibody rituximab, remains a foundation of MCL treatment. Common regimens include:
-        </p>
-        <ul class="text-charcoal/70 space-y-2">
-          <li><strong>R-CHOP:</strong> Rituximab with cyclophosphamide, doxorubicin, vincristine, and prednisone</li>
-          <li><strong>R-DHAP or R-HiDAC:</strong> More intensive regimens often used in younger, fitter patients</li>
-          <li><strong>Bendamustine + Rituximab (BR):</strong> A well-tolerated combination frequently used in older patients</li>
-          <li><strong>R-Hyper-CVAD:</strong> An intensive alternating regimen</li>
-        </ul>
-
-        <h2>Targeted Therapies</h2>
-        <p class="text-charcoal/70">
-          Targeted therapies have transformed MCL treatment by focusing on specific molecular pathways:
-        </p>
-        <ul class="text-charcoal/70 space-y-2">
-          <li><strong>BTK Inhibitors:</strong> Drugs like ibrutinib, acalabrutinib, and zanubrutinib block the Bruton's tyrosine kinase enzyme that MCL cells depend on. These have become a cornerstone of MCL treatment, especially in relapsed disease.</li>
-          <li><strong>BCL-2 Inhibitors:</strong> Venetoclax targets a protein that helps cancer cells survive, and is often used in combination with other therapies.</li>
-          <li><strong>Proteasome Inhibitors:</strong> Bortezomib disrupts the cell's protein recycling system.</li>
-          <li><strong>mTOR Inhibitors:</strong> Temsirolimus targets cell growth signaling.</li>
-        </ul>
-
-        <h2>Stem Cell Transplantation</h2>
-        <p class="text-charcoal/70">
-          For younger, fit patients who respond well to initial chemotherapy, autologous stem cell transplantation (using the patient's own stem cells) may be recommended to extend remission. This approach is typically considered for patients under 65, though fitness rather than age alone determines eligibility.
-        </p>
-
-        <h2>CAR-T Cell Therapy</h2>
-        <p class="text-charcoal/70">
-          Chimeric antigen receptor T-cell (CAR-T) therapy represents an important advance for MCL patients whose disease has relapsed after or is resistant to other treatments. Brexucabtagene autoleucel (Tecartus) was approved specifically for relapsed/refractory MCL and has shown meaningful responses in patients with limited options.
-        </p>
-
-        <h2>Watch and Wait</h2>
-        <p class="text-charcoal/70">
-          For a subset of patients with indolent (slow-growing) MCL — often the leukemic non-nodal variant — active surveillance ("watch and wait") may be appropriate. This approach involves regular monitoring without immediate treatment, reserving therapy for when the disease shows signs of progression.
-        </p>
-
-        <h2>Clinical Trials</h2>
-        <p class="text-charcoal/70">
-          Clinical trials offer access to promising new treatments and combination strategies. We encourage all MCL patients to discuss clinical trial options with their care team. Trials are available for newly diagnosed patients, those in remission (maintenance), and those with relapsed or refractory disease.
-        </p>
-
-        <div class="bg-sage/30 rounded-xl p-6 my-8">
-          <h3 class="text-lg font-bold text-charcoal mb-2">Take the Next Step</h3>
-          <ul class="text-charcoal/70 space-y-2 mb-0">
-            <li><a href="/understanding-mcl/find-specialist">Find an MCL specialist</a></li>
-            <li><a href="/research">Learn about current MCL research</a></li>
-          </ul>
-        </div>
+        <Content />
       </div>
-
-      <MedicalDisclaimer />
+      {page.data.showMedicalDisclaimer && <MedicalDisclaimer />}
     </div>
   </section>
 </BaseLayout>

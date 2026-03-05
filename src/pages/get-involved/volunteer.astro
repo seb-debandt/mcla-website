@@ -1,66 +1,47 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'volunteer');
+const { Content } = await render(page);
 ---
 
-<BaseLayout
-  title="Volunteer"
-  description="Volunteer with MCLA and help make a difference for the mantle cell lymphoma community. Multiple opportunities available."
->
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Volunteer With MCLA</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
-        Your time and skills can help us reach more patients and families. Here's how you can contribute.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
+      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose max-w-none">
-        <p class="text-lg text-charcoal/70 leading-relaxed">
-          MCLA is a growing organization, and volunteers are essential to our success. Whether you're a patient, caregiver, medical professional, or someone who wants to support the MCL community, we have opportunities for you.
-        </p>
+        <Content />
+      </div>
 
-        <h2>Volunteer Opportunities</h2>
-
-        <div class="space-y-6 not-prose my-8">
-          <div class="bg-white rounded-xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-2">Patient & Caregiver Mentors</h3>
-            <p class="text-charcoal/60 text-sm">Share your experience with newly diagnosed patients and caregivers. Provide peer support and guidance to help others navigate their MCL journey.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-2">Content & Communications</h3>
-            <p class="text-charcoal/60 text-sm">Help create patient education materials, write blog posts, manage social media, or contribute to our newsletter. Writers, editors, and designers are welcome.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-2">Community Outreach</h3>
-            <p class="text-charcoal/60 text-sm">Help us connect with patients, support groups, and healthcare providers in your community. Be a local ambassador for MCLA.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-2">Event Support</h3>
-            <p class="text-charcoal/60 text-sm">Assist with planning and executing educational events, fundraisers, and awareness campaigns — both virtual and in-person.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-2">Professional Skills</h3>
-            <p class="text-charcoal/60 text-sm">Contribute professional expertise in areas like legal, finance, technology, marketing, healthcare, or nonprofit management.</p>
-          </div>
+      {page.data.volunteerRoles && (
+        <div class="space-y-6 my-8">
+          <h2 class="text-2xl font-bold text-charcoal">Volunteer Opportunities</h2>
+          {page.data.volunteerRoles.map((role: { name: string; description: string }) => (
+            <div class="bg-white rounded-xl border border-sage p-6">
+              <h3 class="text-lg font-bold text-charcoal mb-2">{role.name}</h3>
+              <p class="text-charcoal/60 text-sm">{role.description}</p>
+            </div>
+          ))}
         </div>
+      )}
 
-        <h2>How to Get Started</h2>
-        <p class="text-charcoal/70">
-          Ready to volunteer? Fill out our contact form and let us know your interests and availability. We'll match you with opportunities that fit your skills and schedule.
-        </p>
-
+      {page.data.ctaText && page.data.ctaUrl && (
         <div class="not-prose mt-8">
           <a
-            href="/contact"
+            href={page.data.ctaUrl}
             class="inline-flex items-center px-7 py-3 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline"
           >
-            Sign Up to Volunteer
+            {page.data.ctaText}
           </a>
         </div>
-      </div>
+      )}
     </div>
   </section>
 </BaseLayout>
