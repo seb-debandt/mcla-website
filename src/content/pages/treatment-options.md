@@ -13,9 +13,7 @@ The treatment landscape for mantle cell lymphoma (MCL) continues to change, with
 
 Treatment depends on the subtype and stage of disease, your age and overall health, any prior therapies you have received, and your personal goals and preferences. Your care team will help tailor a plan that is right for you. haematologica+2
 
-#### Chemotherapy and Immunotherapy
-
-
+### Chemotherapy and Immunotherapy
 
 Traditional chemotherapy combined with an immune‑based drug called rituximab (an antibody that targets CD20 on lymphoma cells) is still used, especially for people who are newly diagnosed. Common chemo‑immunotherapy combinations include: canadianhematologytoday+1
 
@@ -31,9 +29,7 @@ More information:
 * <https://haematologica.org/article/view/11822>
 * <https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
 
-#### Targeted Therapies
-
-
+### Targeted Therapies
 
 Targeted therapies are pills or infusions that block specific signals cancer cells use to grow and survive. For MCL, key targeted options include: pubmed.ncbi.nlm.nih+1
 
@@ -56,8 +52,7 @@ Relapsed/refractory overview (including BTKi and venetoclax):
 
 * <https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
 
-#### Stem Cell Transplantation
-
+### Stem Cell Transplantation
 
 For some younger or medically fit patients who respond well to initial treatment, an autologous stem cell transplant (using the patient’s own blood‑forming stem cells) may be used to deepen the response and help
 the remission last longer. With the growth of BTK inhibitors and cellular therapies, the role of transplant is being individualized based on risk factors (such as very aggressive disease or certain genetic changes) and patient preferences. Allogeneic (donor) stem cell transplant is generally reserved for selected patients with high‑risk or repeatedly relapsing disease when other options, including CAR‑T, are not appropriate or available. pmc.ncbi.nlm.nih+3
@@ -68,10 +63,7 @@ More information:
 * <https://haematologica.org/article/view/11822>
 * <https://pmc.ncbi.nlm.nih.gov/articles/PMC10888497/>
 
-
-
-#### CAR‑T Cell Therapy and Other T‑Cell–Redirecting Therapies
-
+### CAR‑T Cell Therapy and Other T‑Cell–Redirecting Therapies
 
 CAR‑T cell therapy is an advanced form of immunotherapy in which a patient’s own T cells are engineered in a lab to recognize and attack lymphoma cells. Brexucabtagene autoleucel (Tecartus) is an approved CAR‑T cell therapy for adults with relapsed or refractory MCL after at least one prior treatment; many patients in studies had already received a BTK inhibitor and several other treatments. In these patients, CAR‑T therapy produced high response rates, including deep and sometimes long‑lasting remissions, but it can have serious side effects and is given only at specialized centers.pmc.ncbi.nlm.nih+3
 
@@ -91,10 +83,7 @@ T‑cell–redirecting approaches and bispecific antibodies:
 * <https://haematologica.org/article/view/11822>
 * <https://pubmed.ncbi.nlm.nih.gov/39365960/>
 
-
-
-#### Watch and Wait (Active Surveillance)
-
+### Watch and Wait (Active Surveillance)
 
 Some people have a slower‑growing form of MCL, often called indolent or leukemic non‑nodal MCL. In these cases, immediate treatment is not always necessary, and a “watch and wait” or active surveillance approach—with regular checkups, blood tests, and scans—can be safe. Treatment is started if there are signs that the lymphoma is growing, blood counts are changing, or symptoms are developing. canadianhematologytoday+1
 
@@ -104,10 +93,7 @@ More information:
 * <https://haematologica.org/article/view/11822>
 * <https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
 
-
-
-#### Clinical Trials
-
+### Clinical Trials
 
 Clinical trials are a key part of MCL care and offer access to promising new drugs and combinations that are not yet widely available. Current trials include studies of: pubmed.ncbi.nlm.nih+1
 
@@ -116,7 +102,6 @@ Clinical trials are a key part of MCL care and offer access to promising new dru
 * Bispecific antibodies and other immune‑based treatments, alone or in combination with antibody‑drug conjugates. pubmed.ncbi.nlm.nih+2
 
 Because the field is moving quickly, asking about clinical trial options at diagnosis and at each relapse can help ensure you are aware of all available choices.haematologica+1
-
 
 More information and scientific updates:
 
