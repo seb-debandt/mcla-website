@@ -19,22 +19,17 @@ Treatment depends on the subtype and stage of disease, your age and overall heal
 
 Traditional chemotherapy combined with an immune‑based drug called rituximab (an antibody that targets CD20 on lymphoma cells) is still used, especially for people who are newly diagnosed. Common chemo‑immunotherapy combinations include: canadianhematologytoday+1
 
-* R‑CHOP: rituximab with cyclophosphamide, doxorubicin, vincristine, and
-  prednisone.\[canadianhematologytoday]
-* Cytarabine‑containing regimens such as R‑DHAP or other high‑dose
-  cytarabine‑based treatments, which are more intensive and often used
-  in younger, fitter patients.haematologica+1
-* Bendamustine plus rituximab (BR), a commonly used and relatively
-  well‑tolerated option, especially in older adults.haematologica+1
-* R‑Hyper‑CVAD, an intensive alternating regimen used in selected fit
-  patients at experienced centers.\[pmc.ncbi.nlm.nih]
+* R‑CHOP: rituximab with cyclophosphamide, doxorubicin, vincristine, and prednisone.\[canadianhematologytoday]
+* Cytarabine‑containing regimens such as R‑DHAP or other high‑dose cytarabine‑based treatments, which are more intensive and often used in younger, fitter patients.haematologica+1
+* Bendamustine plus rituximab (BR), a commonly used and relatively well‑tolerated option, especially in older adults.haematologica+1
+* R‑Hyper‑CVAD, an intensive alternating regimen used in selected fit patients at experienced centers.\[pmc.ncbi.nlm.nih]
 
-These regimens can be used alone, followed by a stem cell transplant
-in some patients, or combined with newer targeted drugs in clinical
-trials.pubmed.ncbi.nlm.nih+1
+These regimens can be used alone, followed by a stem cell transplant in some patients, or combined with newer targeted drugs in clinical trials.pubmed.ncbi.nlm.nih+1
 
-More information: <https://haematologica.org/article/view/11822> and
-<https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
+More information:
+
+* <https://haematologica.org/article/view/11822>
+* <https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
 
 #### Targeted Therapies
 
@@ -53,11 +48,13 @@ In many centers, BTK inhibitors are preferred at first relapse, and treatment de
 More information:
 
 General strategies and novel drugs:
-<https://haematologica.org/article/view/11822> and
-<https://pubmed.ncbi.nlm.nih.gov/38635491/>
+
+* <https://haematologica.org/article/view/11822>
+* <https://pubmed.ncbi.nlm.nih.gov/38635491/>
 
 Relapsed/refractory overview (including BTKi and venetoclax):
-<https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
+
+* <https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
 
 #### Stem Cell Transplantation
 
@@ -66,8 +63,10 @@ For some younger or medically fit patients who respond well to initial treatment
 the remission last longer. With the growth of BTK inhibitors and cellular therapies, the role of transplant is being individualized based on risk factors (such as very aggressive disease or certain genetic changes) and patient preferences. Allogeneic (donor) stem cell transplant is generally reserved for selected patients with high‑risk or repeatedly relapsing disease when other options, including CAR‑T, are not appropriate or available. pmc.ncbi.nlm.nih+3
 
 
-More information: <https://haematologica.org/article/view/11822> and
-<https://pmc.ncbi.nlm.nih.gov/articles/PMC10888497/>
+More information:
+
+* <https://haematologica.org/article/view/11822>
+* <https://pmc.ncbi.nlm.nih.gov/articles/PMC10888497/>
 
 
 
@@ -112,12 +111,9 @@ More information:
 
 Clinical trials are a key part of MCL care and offer access to promising new drugs and combinations that are not yet widely available. Current trials include studies of: pubmed.ncbi.nlm.nih+1
 
-* New BTK inhibitors and combinations with venetoclax, antibodies, or
-  chemotherapy. pubmed.ncbi.nlm.nih+1
-* Different ways to use CAR‑T cell therapy, including earlier in the
-  disease course or together with BTK inhibitors. pmc.ncbi.nlm.nih+1
-* Bispecific antibodies and other immune‑based treatments, alone or in
-  combination with antibody‑drug conjugates. pubmed.ncbi.nlm.nih+2
+* New BTK inhibitors and combinations with venetoclax, antibodies, or chemotherapy. pubmed.ncbi.nlm.nih+1
+* Different ways to use CAR‑T cell therapy, including earlier in the disease course or together with BTK inhibitors. pmc.ncbi.nlm.nih+1
+* Bispecific antibodies and other immune‑based treatments, alone or in combination with antibody‑drug conjugates. pubmed.ncbi.nlm.nih+2
 
 Because the field is moving quickly, asking about clinical trial options at diagnosis and at each relapse can help ensure you are aware of all available choices.haematologica+1
 
