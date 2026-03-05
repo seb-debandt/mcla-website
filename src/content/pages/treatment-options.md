@@ -97,39 +97,39 @@ T‑cell–redirecting approaches and bispecific antibodies:
 #### Watch and Wait (Active Surveillance)
 
 
-Some people have a slower‑growing form of MCL, often called indolent
-or leukemic non‑nodal MCL. In these cases, immediate treatment is not
-always necessary, and a “watch and wait” or active surveillance
-approach—with regular checkups, blood tests, and scans—can be safe.
-Treatment is started if there are signs that the lymphoma is growing,
-blood counts are changing, or symptoms are
-developing.canadianhematologytoday+1
-More information: <https://haematologica.org/article/view/11822> and
-<https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
+Some people have a slower‑growing form of MCL, often called indolent or leukemic non‑nodal MCL. In these cases, immediate treatment is not always necessary, and a “watch and wait” or active surveillance approach—with regular checkups, blood tests, and scans—can be safe. Treatment is started if there are signs that the lymphoma is growing, blood counts are changing, or symptoms are developing. canadianhematologytoday+1
 
-Clinical Trials
-Clinical trials are a key part of MCL care and offer access to
-promising new drugs and combinations that are not yet widely
-available. Current trials include studies of:pubmed.ncbi.nlm.nih+1
 
-New BTK inhibitors and combinations with venetoclax, antibodies, or
-chemotherapy.pubmed.ncbi.nlm.nih+1
+More information:
 
-Different ways to use CAR‑T cell therapy, including earlier in the
-disease course or together with BTK inhibitors.pmc.ncbi.nlm.nih+1
+* <https://haematologica.org/article/view/11822>
+* <https://canadianhematologytoday.com/article/view/3-3-Champagne_et_al>
 
-Bispecific antibodies and other immune‑based treatments, alone or in
-combination with antibody‑drug conjugates.pubmed.ncbi.nlm.nih+2
 
-Because the field is moving quickly, asking about clinical trial
-options at diagnosis and at each relapse can help ensure you are aware
-of all available choices.haematologica+1
+
+#### Clinical Trials
+
+
+Clinical trials are a key part of MCL care and offer access to promising new drugs and combinations that are not yet widely available. Current trials include studies of: pubmed.ncbi.nlm.nih+1
+
+* New BTK inhibitors and combinations with venetoclax, antibodies, or
+  chemotherapy. pubmed.ncbi.nlm.nih+1
+* Different ways to use CAR‑T cell therapy, including earlier in the
+  disease course or together with BTK inhibitors. pmc.ncbi.nlm.nih+1
+* Bispecific antibodies and other immune‑based treatments, alone or in
+  combination with antibody‑drug conjugates. pubmed.ncbi.nlm.nih+2
+
+Because the field is moving quickly, asking about clinical trial options at diagnosis and at each relapse can help ensure you are aware of all available choices.haematologica+1
+
+
 More information and scientific updates:
 
 Review of strategies after BTK inhibitors and emerging agents:
-<https://haematologica.org/article/view/11822> and
-<https://pubmed.ncbi.nlm.nih.gov/39540208/>
+
+* <https://haematologica.org/article/view/11822>
+* <https://pubmed.ncbi.nlm.nih.gov/39540208/>
 
 Broader review of relapsed/refractory MCL options:
-<https://pubmed.ncbi.nlm.nih.gov/38635491/> and
-<https://pmc.ncbi.nlm.nih.gov/articles/PMC10888497/>
+
+* <https://pubmed.ncbi.nlm.nih.gov/38635491/>
+* <https://pmc.ncbi.nlm.nih.gov/articles/PMC10888497/>
