@@ -1,19 +1,24 @@
 ---
-title: "Caregiver Support"
-subtitle: "Caring for someone with MCL is a journey. Here's how to support your loved one — and yourself."
-description: "Resources and guidance for caregivers of mantle cell lymphoma patients — practical tips, emotional support, and self-care strategies."
+title: Caregiver Support
+draft: true
+subtitle: Caring for someone with MCL is a journey. Here's how to support your
+  loved one — and yourself.
+description: Resources and guidance for caregivers of mantle cell lymphoma
+  patients — practical tips, emotional support, and self-care strategies.
 showMedicalDisclaimer: true
-ctaText: "Contact Us"
-ctaUrl: "/contact"
+ctaText: Contact Us
+ctaUrl: /contact
 resources:
-  - name: "Support Groups"
-    description: "Connect with other MCL caregivers who understand your experience."
-  - name: "Financial Assistance"
-    description: "Programs that can help with treatment costs, transportation, and other expenses."
-  - name: "Mental Health"
-    description: "Counseling and therapy resources for caregivers managing stress and anxiety."
-  - name: "Respite Care"
-    description: "Temporary relief services so caregivers can take necessary breaks."
+  - name: Support Groups
+    description: Connect with other MCL caregivers who understand your experience.
+  - name: Financial Assistance
+    description: Programs that can help with treatment costs, transportation, and
+      other expenses.
+  - name: Mental Health
+    description: Counseling and therapy resources for caregivers managing stress and
+      anxiety.
+  - name: Respite Care
+    description: Temporary relief services so caregivers can take necessary breaks.
 ---
 
 As a caregiver to someone with MCL, you play an essential role in their care and wellbeing. But caregiving can be demanding — physically, emotionally, and practically. You deserve support too.
