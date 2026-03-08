@@ -65,6 +65,7 @@ collections:
         file: "src/content/pages/home.md"
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "Home" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Highlighted Text", name: "heroHighlight", widget: "string" }
@@ -99,6 +100,7 @@ collections:
         file: "src/content/pages/mission.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Mission Statement", name: "missionStatement", widget: "text" }
@@ -115,6 +117,7 @@ collections:
         file: "src/content/pages/our-story.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -127,6 +130,7 @@ collections:
         file: "src/content/pages/what-is-mcl.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -137,6 +141,7 @@ collections:
         file: "src/content/pages/newly-diagnosed.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -148,6 +153,7 @@ collections:
         file: "src/content/pages/treatment-options.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -158,6 +164,7 @@ collections:
         file: "src/content/pages/find-specialist.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -171,6 +178,7 @@ collections:
         file: "src/content/pages/caregiver-support.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -191,6 +199,7 @@ collections:
         file: "src/content/pages/research.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Intro Text", name: "intro", widget: "text" }
@@ -213,6 +222,7 @@ collections:
         file: "src/content/pages/research-priorities.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -225,6 +235,7 @@ collections:
         file: "src/content/pages/for-researchers.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -237,6 +248,7 @@ collections:
         file: "src/content/pages/get-involved.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - label: "Ways to Help"
@@ -254,6 +266,7 @@ collections:
         file: "src/content/pages/volunteer.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -272,6 +285,7 @@ collections:
         file: "src/content/pages/partner.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -284,6 +298,7 @@ collections:
         file: "src/content/pages/contact.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - label: "Contact Channels"
@@ -300,6 +315,7 @@ collections:
         file: "src/content/pages/donate.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - label: "Donation Amounts"

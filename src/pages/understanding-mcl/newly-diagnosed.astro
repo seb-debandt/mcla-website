@@ -4,6 +4,7 @@ import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
 import { getEntry, render } from 'astro:content';
 
 const page = await getEntry('pages', 'newly-diagnosed');
+if (page.data.draft) return Astro.redirect('/404');
 const { Content } = await render(page);
 ---
 

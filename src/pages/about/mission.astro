@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
 
 const page = await getEntry('pages', 'mission');
+if (page.data.draft) return Astro.redirect('/404');
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>

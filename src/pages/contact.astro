@@ -4,6 +4,7 @@ import ContactForm from '../components/ContactForm.astro';
 import { getEntry } from 'astro:content';
 
 const page = await getEntry('pages', 'contact');
+if (page.data.draft) return Astro.redirect('/404');
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>

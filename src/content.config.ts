@@ -29,6 +29,7 @@ const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(),
+    draft: z.boolean().optional(),
     subtitle: z.string().optional(),
     description: z.string().optional(),
     // Home page fields

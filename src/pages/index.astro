@@ -9,6 +9,7 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getEntry } from 'astro:content';
 
 const page = await getEntry('pages', 'home');
+if (page.data.draft) return Astro.redirect('/404');
 ---
 
 <BaseLayout title="Home">
