@@ -15,6 +15,6 @@ bio: >-
    
 
   Karen spent more than 30 years as an international tax attorney in government and as partner with Ernst & Young in the US and Europe. She also serves as President of the board of the arts-education nonprofit Take It From The Top, bringing nonprofit governance and leadership experience to MCLA.
-photo: ""
+photo: /uploads/headshot-bod.png
 order: 2
 ---
