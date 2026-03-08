@@ -32,11 +32,11 @@ Specialized laboratory studies, including immunophenotyping and genetic tests, c
 
 ## What Makes MCL Different
 
-Mantle cell lymphoma is often described as having features of both slow‑growing and aggressive lymphomas: some people have a more indolent form that progresses slowly, while others have disease that behaves more aggressively and needs prompt treatment. [[cancer.gov](<>)]  <https://www.ncbi.nlm.nih.gov/books/NBK536985/><https://lymphoma-action.org.uk/information-and-support/types-lymphoma/non-hodgkin-lymphoma/mantle-cell-lymphoma>
+Mantle cell lymphoma is often described as having features of both slow‑growing and aggressive lymphomas: some people have a more indolent form that progresses slowly, while others have disease that behaves more aggressively and needs prompt treatment. [[ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK536985/https://lymphoma-action.org.uk/information-and-support/types-lymphoma/non-hodgkin-lymphoma/mantle-cell-lymphoma)]  
 
-A less common type called leukemic non‑nodal mantle cell lymphoma tends to involve the blood, bone marrow, and spleen rather than forming large lymph node masses and often follows a slower course. [[cancer.gov](<>)] <https://lymphoma-action.org.uk/information-and-support/types-lymphoma/non-hodgkin-lymphoma/mantle-cell-lymphoma>
+A less common type called leukemic non‑nodal mantle cell lymphoma tends to involve the blood, bone marrow, and spleen rather than forming large lymph node masses and often follows a slower course. [[lymphoma-action.org.uk](https://lymphoma-action.org.uk/information-and-support/types-lymphoma/non-hodgkin-lymphoma/mantle-cell-lymphoma)] 
 
-For selected patients with few symptoms and evidence of slow‑growing disease, careful observation (sometimes called “watch and wait” or active surveillance) may be recommended before starting treatment, with regular follow‑up to watch for changes. [[cancer.gov](<>)] <https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/><https://www.cancercare.org/diagnosis/mantle_cell_lymphoma>
+For selected patients with few symptoms and evidence of slow‑growing disease, careful observation (sometimes called “watch and wait” or active surveillance) may be recommended before starting treatment, with regular follow‑up to watch for changes. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/https://www.cancercare.org/diagnosis/mantle_cell_lymphoma)] 
 
 ## Next Steps
 
