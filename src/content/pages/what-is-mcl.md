@@ -16,19 +16,19 @@ Mantle cell lymphoma (MCL) is a rare type of non‑Hodgkin lymphoma that starts 
 
 ## Signs and Symptoms
 
-Many people with mantle cell lymphoma may have few or no symptoms at first, and the disease is sometimes discovered when tests are done for another reason. [[cancer.gov](<>)] <https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/><https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872>
+Many people with mantle cell lymphoma may have few or no symptoms at first, and the disease is sometimes discovered when tests are done for another reason. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872)]
 
-When symptoms happen, they can include painless swelling of lymph nodes in the neck, armpit, or groin, as well as fatigue, fever, night sweats, decreased appetite, and unintentional weight loss. [[cancer.gov](<>)] <https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872><https://www.webmd.com/cancer/lymphoma/mantle-cell-lymphoma>
+When symptoms happen, they can include painless swelling of lymph nodes in the neck, armpit, or groin, as well as fatigue, fever, night sweats, decreased appetite, and unintentional weight loss. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872https://www.webmd.com/cancer/lymphoma/mantle-cell-lymphoma)] 
 
-Some people may also have nausea, diarrhea, bloating, or a feeling of fullness or discomfort in the abdomen if the digestive tract, liver, or spleen are affected. [[cancer.gov](<>)] <https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872><https://www.webmd.com/cancer/lymphoma/mantle-cell-lymphoma>
+Some people may also have nausea, diarrhea, bloating, or a feeling of fullness or discomfort in the abdomen if the digestive tract, liver, or spleen are affected. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872https://www.webmd.com/cancer/lymphoma/mantle-cell-lymphoma)] 
 
 ## How MCL Is Diagnosed
 
-Diagnosis of mantle cell lymphoma usually starts with a physical exam to check for enlarged lymph nodes and organs, followed by a biopsy of an affected lymph node or other tissue so that specialists can look for lymphoma cells under a microscope. [[cancer.gov](<>)] <https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/diagnosis-treatment/drc-20584873><https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/>
+Diagnosis of mantle cell lymphoma usually starts with a physical exam to check for enlarged lymph nodes and organs, followed by a biopsy of an affected lymph node or other tissue so that specialists can look for lymphoma cells under a microscope. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/diagnosis-treatment/drc-20584873)] 
 
-Blood tests, imaging tests such as CT or PET/CT scans, and often a bone marrow biopsy help show how far the lymphoma has spread in the body. [[cancer.gov](<>)] <https://www.dana-farber.org/cancer-care/types/mantle-cell-lymphoma><https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/diagnosis-treatment/drc-20584873>
+Blood tests, imaging tests such as CT or PET/CT scans, and often a bone marrow biopsy help show how far the lymphoma has spread in the body. [[dana-farber.org](https://www.dana-farber.org/cancer-care/types/mantle-cell-lymphomahttps://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/diagnosis-treatment/drc-20584873)] 
 
-Specialized laboratory studies, including immunophenotyping and genetic tests, can detect cyclin D1 overexpression and the t(11;14) translocation to confirm the diagnosis of MCL. [[cancer.gov](<>)] <https://www.ncbi.nlm.nih.gov/books/NBK536985/>
+Specialized laboratory studies, including immunophenotyping and genetic tests, can detect cyclin D1 overexpression and the t(11;14) translocation to confirm the diagnosis of MCL. [[ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK536985/)] 
 
 ## What Makes MCL Different
 
