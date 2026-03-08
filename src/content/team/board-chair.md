@@ -1,6 +1,6 @@
 ---
 name: Karen Holden
-title: Co-founder and Secretary
+title: Co-founder and Board Secretary
 roleType: board
 bio: >-
   Karen Holden is co-founder and Secretary of the MCLA. Her connection to the
