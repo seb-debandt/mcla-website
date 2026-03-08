@@ -1,12 +1,14 @@
 ---
-title: "Partner With Us"
-navMenu: "Get Involved"
-navLabel: "Partner With Us"
+title: Partner With Us
+draft: true
+navMenu: Get Involved
+navLabel: Partner With Us
 navOrder: 3
-subtitle: "Together, we can accelerate progress for the MCL community."
-description: "Partner with MCLA to advance MCL care and research. Medical institutions, research organizations, and corporate partners welcome."
-ctaText: "Contact Us About Partnerships"
-ctaUrl: "/contact"
+subtitle: Together, we can accelerate progress for the MCL community.
+description: Partner with MCLA to advance MCL care and research. Medical
+  institutions, research organizations, and corporate partners welcome.
+ctaText: Contact Us About Partnerships
+ctaUrl: /contact
 ---
 
 MCLA believes that meaningful progress against MCL requires collaboration. We welcome partnerships with medical institutions, research organizations, pharmaceutical companies, and other nonprofits who share our commitment to improving outcomes for MCL patients.
