@@ -1,12 +1,14 @@
 ---
-title: "Our Story"
-navMenu: "About"
-navLabel: "Our Story"
+title: Our Story
+draft: true
+navMenu: About
+navLabel: Our Story
 navOrder: 2
-subtitle: "Born from personal experience. Built for the entire MCL community."
-description: "Learn how the Mantle Cell Lymphoma Alliance was founded and our journey to support the MCL community."
-ctaText: "Join Our Mission"
-ctaUrl: "/get-involved"
+subtitle: Born from personal experience. Built for the entire MCL community.
+description: Learn how the Mantle Cell Lymphoma Alliance was founded and our
+  journey to support the MCL community.
+ctaText: Join Our Mission
+ctaUrl: /get-involved
 ---
 
 The Mantle Cell Lymphoma Alliance was born out of a deeply personal experience. When our founders first encountered an MCL diagnosis in their family, they found themselves navigating a landscape with limited resources specifically tailored to this rare cancer.
