@@ -1,12 +1,18 @@
 ---
-title: "Newly Diagnosed"
-navMenu: "Understanding MCL"
-navLabel: "Newly Diagnosed"
+title: Newly Diagnosed
+draft: true
+navMenu: Understanding MCL
+navLabel: Newly Diagnosed
 navOrder: 2
-subtitle: "A diagnosis of MCL can feel overwhelming. You are not alone, and there are clear steps you can take."
-description: "Just diagnosed with mantle cell lymphoma? Here's what you need to know — next steps, questions to ask your doctor, and resources to help."
+subtitle: A diagnosis of MCL can feel overwhelming. You are not alone, and there
+  are clear steps you can take.
+description: Just diagnosed with mantle cell lymphoma? Here's what you need to
+  know — next steps, questions to ask your doctor, and resources to help.
 showMedicalDisclaimer: true
-callout: "**Take a breath.** A new diagnosis brings many emotions — shock, fear, confusion, even anger. These feelings are natural. Know that MCL treatment has advanced significantly, and many people live well with this disease for years. Your next step is to gather good information and build the right care team."
+callout: "**Take a breath.** A new diagnosis brings many emotions — shock, fear,
+  confusion, even anger. These feelings are natural. Know that MCL treatment has
+  advanced significantly, and many people live well with this disease for years.
+  Your next step is to gather good information and build the right care team."
 ---
 
 ## First Steps After Diagnosis
