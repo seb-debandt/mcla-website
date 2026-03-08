@@ -10,7 +10,7 @@ Mantle cell lymphoma (MCL) is a rare type of non‑Hodgkin lymphoma that starts 
 ## Key Facts
 
 * **Incidence and frequency**: MCL is a rare lymphoma and represents roughly 6% of all non‑Hodgkin lymphoma cases in the United States. [[lymphoma.org](https://lymphoma.org/researchers/scientificmeetings/mclscientificmeetings/)] 
-* **Age**: MCL most often affects older adults, with many people diagnosed in their 60s or 70s. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/)] 
+* **Age**: MCL most often affects older adults, with many people diagnosed in their 60s or 70s. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872)] 
 * **Gender:** MCL occurs more often in men than in women. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/)] 
 * **Genetic marker**: MCL is usually associated with a genetic change called the t(11;14) translocation, which leads to overproduction of a protein called cyclin D1 that drives abnormal cell growth. [[ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK536985/)] 
 
