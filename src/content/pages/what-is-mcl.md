@@ -16,11 +16,11 @@ Mantle cell lymphoma (MCL) is a rare type of non‑Hodgkin lymphoma that starts 
 
 ## Signs and Symptoms
 
-Many people with mantle cell lymphoma may have few or no symptoms at first, and the disease is sometimes discovered when tests are done for another reason. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872)]
+Many people with mantle cell lymphoma may have few or no symptoms at first, and the disease is sometimes discovered when tests are done for another reason. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma)]
 
-When symptoms happen, they can include painless swelling of lymph nodes in the neck, armpit, or groin, as well as fatigue, fever, night sweats, decreased appetite, and unintentional weight loss. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872https://www.webmd.com/cancer/lymphoma/mantle-cell-lymphoma)] 
+When symptoms happen, they can include painless swelling of lymph nodes in the neck, armpit, or groin, as well as fatigue, fever, night sweats, decreased appetite, and unintentional weight loss. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872)] 
 
-Some people may also have nausea, diarrhea, bloating, or a feeling of fullness or discomfort in the abdomen if the digestive tract, liver, or spleen are affected. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872https://www.webmd.com/cancer/lymphoma/mantle-cell-lymphoma)] 
+Some people may also have nausea, diarrhea, bloating, or a feeling of fullness or discomfort in the abdomen if the digestive tract, liver, or spleen are affected. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/symptoms-causes/syc-20584872)] 
 
 ## How MCL Is Diagnosed
 
@@ -32,11 +32,11 @@ Specialized laboratory studies, including immunophenotyping and genetic tests, c
 
 ## What Makes MCL Different
 
-Mantle cell lymphoma is often described as having features of both slow‑growing and aggressive lymphomas: some people have a more indolent form that progresses slowly, while others have disease that behaves more aggressively and needs prompt treatment. [[ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK536985/https://lymphoma-action.org.uk/information-and-support/types-lymphoma/non-hodgkin-lymphoma/mantle-cell-lymphoma)]  
+Mantle cell lymphoma is often described as having features of both slow‑growing and aggressive lymphomas: some people have a more indolent form that progresses slowly, while others have disease that behaves more aggressively and needs prompt treatment. [[ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK536985/)]  
 
 A less common type called leukemic non‑nodal mantle cell lymphoma tends to involve the blood, bone marrow, and spleen rather than forming large lymph node masses and often follows a slower course. [[lymphoma-action.org.uk](https://lymphoma-action.org.uk/information-and-support/types-lymphoma/non-hodgkin-lymphoma/mantle-cell-lymphoma)] 
 
-For selected patients with few symptoms and evidence of slow‑growing disease, careful observation (sometimes called “watch and wait” or active surveillance) may be recommended before starting treatment, with regular follow‑up to watch for changes. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma/https://www.cancercare.org/diagnosis/mantle_cell_lymphoma)] 
+For selected patients with few symptoms and evidence of slow‑growing disease, careful observation (sometimes called “watch and wait” or active surveillance) may be recommended before starting treatment, with regular follow‑up to watch for changes. [[rarediseases.org](https://rarediseases.org/rare-diseases/mantle-cell-lymphoma)] 
 
 ## Next Steps
 
