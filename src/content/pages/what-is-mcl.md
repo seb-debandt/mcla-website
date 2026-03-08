@@ -26,7 +26,7 @@ Some people may also have nausea, diarrhea, bloating, or a feeling of fullness o
 
 Diagnosis of mantle cell lymphoma usually starts with a physical exam to check for enlarged lymph nodes and organs, followed by a biopsy of an affected lymph node or other tissue so that specialists can look for lymphoma cells under a microscope. [[mayoclinic.org](https://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/diagnosis-treatment/drc-20584873)] 
 
-Blood tests, imaging tests such as CT or PET/CT scans, and often a bone marrow biopsy help show how far the lymphoma has spread in the body. [[dana-farber.org](https://www.dana-farber.org/cancer-care/types/mantle-cell-lymphomahttps://www.mayoclinic.org/diseases-conditions/mantle-cell-lymphoma/diagnosis-treatment/drc-20584873)] 
+Blood tests, imaging tests such as CT or PET/CT scans, and often a bone marrow biopsy help show how far the lymphoma has spread in the body. [[dana-farber.org](https://www.dana-farber.org/cancer-care/types/mantle-cell-lymphoma)] 
 
 Specialized laboratory studies, including immunophenotyping and genetic tests, can detect cyclin D1 overexpression and the t(11;14) translocation to confirm the diagnosis of MCL. [[ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK536985/)] 
 
