@@ -61,17 +61,18 @@ if (giLinks.length) quickLinks.push({ title: 'Get Involved', links: giLinks });
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-charcoal text-white/80" role="contentinfo">
+<footer class="bg-teal-deep text-white/80" role="contentinfo">
   <!-- Main Footer -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
       <!-- Brand Column -->
       <div class="lg:col-span-2">
-        <a href="/" class="flex items-center gap-2 no-underline mb-4" aria-label="MCLA Home">
-          <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
-            <span class="text-white font-serif font-bold text-lg">M</span>
+        <a href="/" class="no-underline mb-5 inline-block" aria-label="MCLA Home">
+          <div class="flex flex-col gap-[2px] items-start">
+            <span class="bg-teal text-white font-black text-[13px] tracking-[1.5px] leading-[1.3] px-3 py-1 rounded-[3px] w-fit whitespace-nowrap">MANTLE CELL</span>
+            <span class="bg-amber text-white font-black text-[13px] tracking-[1.5px] leading-[1.3] px-3 py-1 rounded-[3px] w-fit whitespace-nowrap">LYMPHOMA</span>
+            <span class="bg-white/15 text-white font-black text-[13px] tracking-[1.5px] leading-[1.3] px-3 py-1 rounded-[3px] w-fit whitespace-nowrap">ALLIANCE</span>
           </div>
-          <span class="font-serif font-bold text-white text-xl tracking-tight">MCLA</span>
         </a>
         <p class="text-white/60 text-sm leading-relaxed max-w-sm mb-6">
           The Mantle Cell Lymphoma Alliance supports those facing mantle cell lymphoma with trusted information, expert-guided support, and targeted research.
@@ -79,16 +80,16 @@ const currentYear = new Date().getFullYear();
 
         <!-- Social Icons -->
         <div class="flex gap-3">
-          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 hover:bg-teal-primary flex items-center justify-center transition-colors no-underline">
+          <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 hover:bg-teal flex items-center justify-center transition-colors duration-200 no-underline text-white/60 hover:text-white">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <a href="#" aria-label="X (Twitter)" class="w-9 h-9 rounded-full bg-white/10 hover:bg-teal-primary flex items-center justify-center transition-colors no-underline">
+          <a href="#" aria-label="X (Twitter)" class="w-10 h-10 rounded-full bg-white/10 hover:bg-teal flex items-center justify-center transition-colors duration-200 no-underline text-white/60 hover:text-white">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/10 hover:bg-teal-primary flex items-center justify-center transition-colors no-underline">
+          <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/10 hover:bg-teal flex items-center justify-center transition-colors duration-200 no-underline text-white/60 hover:text-white">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full bg-white/10 hover:bg-teal-primary flex items-center justify-center transition-colors no-underline">
+          <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full bg-white/10 hover:bg-teal flex items-center justify-center transition-colors duration-200 no-underline text-white/60 hover:text-white">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
         </div>
@@ -97,11 +98,11 @@ const currentYear = new Date().getFullYear();
       <!-- Link Columns -->
       {quickLinks.map((col) => (
         <div>
-          <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">{col.title}</h3>
+          <h3 class="text-white font-bold text-[13px] uppercase tracking-[2px] mb-4">{col.title}</h3>
           <ul class="space-y-2.5">
             {col.links.map((link) => (
               <li>
-                <a href={link.href} class="text-white/60 hover:text-white text-sm transition-colors no-underline">
+                <a href={link.href} class="text-white/60 hover:text-amber-light text-[14px] transition-colors duration-200 no-underline">
                   {link.label}
                 </a>
               </li>
@@ -115,7 +116,7 @@ const currentYear = new Date().getFullYear();
     <div class="mt-12 pt-8 border-t border-white/10">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
-          <h3 class="text-white font-semibold text-sm mb-1">Stay Informed</h3>
+          <h3 class="text-white font-bold text-sm mb-1">Stay Informed</h3>
           <p class="text-white/50 text-sm">Get the latest MCL research updates and community news.</p>
         </div>
         <form
@@ -132,11 +133,11 @@ const currentYear = new Date().getFullYear();
             id="footer-email"
             required
             placeholder="Your email address"
-            class="px-4 py-2.5 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent w-full md:w-72"
+            class="px-6 py-3 bg-white/[0.06] border border-white/20 rounded-full text-white placeholder-white/35 text-sm focus:outline-none focus:border-amber-light transition-colors duration-200 w-full md:w-72"
           />
           <button
             type="submit"
-            class="px-5 py-2.5 bg-teal-primary hover:bg-teal-dark text-white text-sm font-semibold rounded-lg transition-colors whitespace-nowrap"
+            class="px-7 py-3 bg-amber hover:bg-amber-light text-white text-sm font-bold rounded-full transition-colors duration-200 whitespace-nowrap"
           >
             Subscribe
           </button>
@@ -147,7 +148,7 @@ const currentYear = new Date().getFullYear();
 
   <!-- Bottom Bar -->
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
         <p>
           &copy; {currentYear} Mantle Cell Lymphoma Alliance. All rights reserved.
@@ -156,8 +157,8 @@ const currentYear = new Date().getFullYear();
           MCLA is a 501(c)(3) tax-exempt organization. EIN pending.
         </p>
         <div class="flex gap-4">
-          <a href="/privacy-policy" class="hover:text-white/70 transition-colors no-underline text-white/40">Privacy Policy</a>
-          <a href="/terms-of-use" class="hover:text-white/70 transition-colors no-underline text-white/40">Terms of Use</a>
+          <a href="/privacy-policy" class="hover:text-amber-light transition-colors duration-200 no-underline text-white/40">Privacy Policy</a>
+          <a href="/terms-of-use" class="hover:text-amber-light transition-colors duration-200 no-underline text-white/40">Terms of Use</a>
         </div>
       </div>
     </div>

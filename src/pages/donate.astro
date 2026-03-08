@@ -8,72 +8,72 @@ const amounts = page.data.amounts;
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>
-  <section class="py-16 md:py-20 bg-gradient-to-br from-coral/5 via-warm-white to-gold/5">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
+  <section class="py-16 md:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">{page.data.title}</h1>
+      <p class="text-xl text-text-mid leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
         <div class="lg:col-span-3">
-          <div class="bg-white rounded-2xl border border-sage p-6 md:p-8">
-            <div class="flex bg-sage/50 rounded-lg p-1 mb-8">
-              <button id="one-time-btn" class="flex-1 py-2.5 text-sm font-semibold rounded-md bg-white text-charcoal shadow-sm transition-all" data-frequency="one-time">One-Time</button>
-              <button id="monthly-btn" class="flex-1 py-2.5 text-sm font-semibold rounded-md text-charcoal/60 transition-all" data-frequency="monthly">Monthly</button>
+          <div class="bg-white rounded-2xl border border-border p-6 md:p-8">
+            <div class="flex bg-warm-white rounded-lg p-1 mb-8">
+              <button id="one-time-btn" class="flex-1 py-2.5 text-sm font-semibold rounded-full bg-white text-text-dark shadow-sm transition-all" data-frequency="one-time">One-Time</button>
+              <button id="monthly-btn" class="flex-1 py-2.5 text-sm font-semibold rounded-md text-text-mid transition-all" data-frequency="monthly">Monthly</button>
             </div>
 
             <div class="mb-8">
-              <label class="block text-sm font-medium text-charcoal mb-3">Select an amount</label>
+              <label class="block text-sm font-medium text-text-dark mb-3">Select an amount</label>
               <div class="grid grid-cols-3 gap-3 mb-4">
                 {amounts.map((amt: { value: number; impact: string }) => (
-                  <button class="amount-btn py-3 text-center border-2 border-sage rounded-lg font-semibold text-charcoal hover:border-teal-primary hover:text-teal-primary transition-colors" data-amount={amt.value} data-impact={amt.impact}>${amt.value}</button>
+                  <button class="amount-btn py-3 text-center border-2 border-border rounded-lg font-semibold text-text-dark hover:border-teal hover:text-teal transition-colors" data-amount={amt.value} data-impact={amt.impact}>${amt.value}</button>
                 ))}
-                <button class="amount-btn py-3 text-center border-2 border-sage rounded-lg font-semibold text-charcoal hover:border-teal-primary hover:text-teal-primary transition-colors" data-amount="other">Other</button>
+                <button class="amount-btn py-3 text-center border-2 border-border rounded-lg font-semibold text-text-dark hover:border-teal hover:text-teal transition-colors" data-amount="other">Other</button>
               </div>
               <div id="custom-amount-wrapper" class="hidden">
                 <label for="custom-amount" class="sr-only">Custom amount</label>
                 <div class="relative">
-                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/50 font-semibold">$</span>
-                  <input type="number" id="custom-amount" min="1" placeholder="Enter amount" class="w-full pl-8 pr-4 py-3 border border-sage-dark rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent" />
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-text-light font-semibold">$</span>
+                  <input type="number" id="custom-amount" min="1" placeholder="Enter amount" class="w-full pl-8 pr-4 py-3 border border-border rounded-lg text-text-dark focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
                 </div>
               </div>
-              <p id="impact-text" class="text-sm text-charcoal/50 mt-3 italic"></p>
+              <p id="impact-text" class="text-sm text-text-light mt-3 italic"></p>
             </div>
 
             <div class="mb-8">
               <label class="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" id="tribute-checkbox" class="w-4 h-4 rounded border-sage-dark text-teal-primary focus:ring-teal-primary" />
-                <span class="text-sm text-charcoal/70">Make this gift in honor or memory of someone</span>
+                <input type="checkbox" id="tribute-checkbox" class="w-4 h-4 rounded border-border text-teal focus:ring-teal" />
+                <span class="text-sm text-text-mid">Make this gift in honor or memory of someone</span>
               </label>
               <div id="tribute-fields" class="hidden mt-4 space-y-4">
                 <div class="flex gap-4">
                   <label class="flex items-center gap-2">
-                    <input type="radio" name="tribute-type" value="honor" checked class="text-teal-primary focus:ring-teal-primary" />
-                    <span class="text-sm text-charcoal/70">In honor of</span>
+                    <input type="radio" name="tribute-type" value="honor" checked class="text-teal focus:ring-teal" />
+                    <span class="text-sm text-text-mid">In honor of</span>
                   </label>
                   <label class="flex items-center gap-2">
-                    <input type="radio" name="tribute-type" value="memory" class="text-teal-primary focus:ring-teal-primary" />
-                    <span class="text-sm text-charcoal/70">In memory of</span>
+                    <input type="radio" name="tribute-type" value="memory" class="text-teal focus:ring-teal" />
+                    <span class="text-sm text-text-mid">In memory of</span>
                   </label>
                 </div>
                 <div>
-                  <label for="tribute-name" class="block text-sm font-medium text-charcoal mb-1.5">Name</label>
-                  <input type="text" id="tribute-name" placeholder="Honoree's name" class="w-full px-4 py-3 border border-sage-dark rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent" />
+                  <label for="tribute-name" class="block text-sm font-medium text-text-dark mb-1.5">Name</label>
+                  <input type="text" id="tribute-name" placeholder="Honoree's name" class="w-full px-4 py-3 border border-border rounded-lg text-text-dark focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
                 </div>
               </div>
             </div>
 
-            <button id="donate-btn" class="w-full py-4 bg-coral hover:bg-coral-dark text-white font-bold text-lg rounded-lg transition-colors flex items-center justify-center gap-2">
+            <button id="donate-btn" class="w-full py-4 bg-amber hover:bg-amber-light text-white font-bold text-lg rounded-full transition-all duration-200 flex items-center justify-center gap-2">
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Donate Now
             </button>
 
-            <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-charcoal/40">
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-text-light">
               <span class="flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -86,31 +86,31 @@ const amounts = page.data.amounts;
         </div>
 
         <div class="lg:col-span-2 space-y-8">
-          <div class="bg-sage/30 rounded-2xl p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-4">Why Your Gift Matters</h3>
-            <p class="text-charcoal/60 text-sm leading-relaxed mb-4">{page.data.whyGiftMatters}</p>
-            <ul class="text-charcoal/60 text-sm space-y-2">
+          <div class="bg-warm-white rounded-2xl p-6">
+            <h3 class="text-lg font-extrabold text-text-dark mb-4">Why Your Gift Matters</h3>
+            <p class="text-text-mid text-sm leading-relaxed mb-4">{page.data.whyGiftMatters}</p>
+            <ul class="text-text-mid text-sm space-y-2">
               {page.data.impactAreas.map((area: string) => (
                 <li class="flex items-start gap-2">
-                  <svg class="w-4 h-4 text-teal-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                  <svg class="w-4 h-4 text-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
                   {area}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div class="bg-white rounded-2xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-3">Other Ways to Give</h3>
-            <ul class="text-charcoal/60 text-sm space-y-3">
+          <div class="bg-white rounded-2xl border border-border p-6">
+            <h3 class="text-lg font-extrabold text-text-dark mb-3">Other Ways to Give</h3>
+            <ul class="text-text-mid text-sm space-y-3">
               {page.data.otherWays.map((way: { method: string; description: string }) => (
                 <li><strong>{way.method}:</strong> {way.description}</li>
               ))}
             </ul>
           </div>
 
-          <p class="text-xs text-charcoal/40 text-center">
+          <p class="text-xs text-text-light text-center">
             Questions about giving? Contact us at<br />
-            <a href={`mailto:${page.data.donateEmail}`} class="text-teal-primary no-underline">{page.data.donateEmail}</a>
+            <a href={`mailto:${page.data.donateEmail}`} class="text-teal no-underline">{page.data.donateEmail}</a>
           </p>
         </div>
       </div>
@@ -135,11 +135,11 @@ const amounts = page.data.amounts;
   amountBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       amountBtns.forEach((b) => {
-        b.classList.remove('border-teal-primary', 'text-teal-primary', 'bg-teal-primary/5');
-        b.classList.add('border-sage');
+        b.classList.remove('border-teal', 'text-teal', 'bg-teal/5');
+        b.classList.add('border-border');
       });
-      btn.classList.add('border-teal-primary', 'text-teal-primary', 'bg-teal-primary/5');
-      btn.classList.remove('border-sage');
+      btn.classList.add('border-teal', 'text-teal', 'bg-teal/5');
+      btn.classList.remove('border-border');
 
       const val = btn.getAttribute('data-amount');
       if (val === 'other') {
@@ -162,18 +162,18 @@ const amounts = page.data.amounts;
 
   oneTimeBtn?.addEventListener('click', () => {
     frequency = 'one-time';
-    oneTimeBtn.classList.add('bg-white', 'shadow-sm', 'text-charcoal');
-    oneTimeBtn.classList.remove('text-charcoal/60');
-    monthlyBtn?.classList.remove('bg-white', 'shadow-sm', 'text-charcoal');
-    monthlyBtn?.classList.add('text-charcoal/60');
+    oneTimeBtn.classList.add('bg-white', 'shadow-sm', 'text-text-dark');
+    oneTimeBtn.classList.remove('text-text-mid');
+    monthlyBtn?.classList.remove('bg-white', 'shadow-sm', 'text-text-dark');
+    monthlyBtn?.classList.add('text-text-mid');
   });
 
   monthlyBtn?.addEventListener('click', () => {
     frequency = 'monthly';
-    monthlyBtn.classList.add('bg-white', 'shadow-sm', 'text-charcoal');
-    monthlyBtn.classList.remove('text-charcoal/60');
-    oneTimeBtn?.classList.remove('bg-white', 'shadow-sm', 'text-charcoal');
-    oneTimeBtn?.classList.add('text-charcoal/60');
+    monthlyBtn.classList.add('bg-white', 'shadow-sm', 'text-text-dark');
+    monthlyBtn.classList.remove('text-text-mid');
+    oneTimeBtn?.classList.remove('bg-white', 'shadow-sm', 'text-text-dark');
+    oneTimeBtn?.classList.add('text-text-mid');
   });
 
   const tributeCheckbox = document.getElementById('tribute-checkbox') as HTMLInputElement;

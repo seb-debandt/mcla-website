@@ -7,23 +7,23 @@ if (page.data.draft) return Astro.redirect('/404');
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>
-  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
+  <section class="py-16 md:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">{page.data.title}</h1>
+      <p class="text-xl text-text-mid leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-sage/30 rounded-2xl p-8 md:p-12 mb-16">
-        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-6">Mission Statement</h2>
-        <p class="text-lg text-charcoal/80 leading-relaxed">{page.data.missionStatement}</p>
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <div class="bg-warm-white rounded-2xl p-8 md:p-12 mb-16">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">Mission Statement</h2>
+        <p class="text-lg text-text-dark/80 leading-relaxed">{page.data.missionStatement}</p>
       </div>
 
       <div class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-6">Our Vision</h2>
-        <p class="text-lg text-charcoal/70 leading-relaxed">{page.data.vision}</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">Our Vision</h2>
+        <p class="text-lg text-text-mid leading-relaxed">{page.data.vision}</p>
       </div>
 
     </div>

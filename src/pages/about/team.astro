@@ -19,20 +19,20 @@ const staffMembers = allMembers
   title="Our Team"
   description="Meet the dedicated board members, medical advisors, and staff behind the Mantle Cell Lymphoma Alliance."
 >
-  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">Our Team</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">
+  <section class="py-16 md:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">Our Team</h1>
+      <p class="text-xl text-text-mid leading-relaxed">
         MCLA is guided by a dedicated team of patients, caregivers, medical professionals, and advocates committed to advancing care for the MCL community.
       </p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
       <!-- Board of Directors -->
       <div class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-8">Board of Directors</h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark tracking-[-0.5px] mb-8">Board of Directors</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {boardMembers.map((member) => (
             <TeamMember name={member.data.name} title={member.data.title} bio={member.data.bio} roleType={member.data.roleType} photo={member.data.photo} />
@@ -43,7 +43,7 @@ const staffMembers = allMembers
       <!-- Medical Advisory Board -->
       {advisoryMembers.length > 0 && (
       <div class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-8">Medical Advisory Board</h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark tracking-[-0.5px] mb-8">Medical Advisory Board</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {advisoryMembers.map((member) => (
             <TeamMember name={member.data.name} title={member.data.title} bio={member.data.bio} roleType={member.data.roleType} photo={member.data.photo} />
@@ -55,7 +55,7 @@ const staffMembers = allMembers
       <!-- Staff -->
       {staffMembers.length > 0 && (
       <div>
-        <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-8">Staff</h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-dark tracking-[-0.5px] mb-8">Staff</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {staffMembers.map((member) => (
             <TeamMember name={member.data.name} title={member.data.title} bio={member.data.bio} roleType={member.data.roleType} photo={member.data.photo} />
@@ -65,14 +65,14 @@ const staffMembers = allMembers
       )}
 
       <!-- Join the Team -->
-      <div class="mt-16 bg-sage/30 rounded-2xl p-8 md:p-12 text-center">
-        <h2 class="text-2xl font-bold text-charcoal mb-4">Join Our Team</h2>
-        <p class="text-charcoal/60 mb-6 max-w-2xl mx-auto">
+      <div class="mt-16 bg-warm-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-extrabold text-text-dark tracking-[-0.5px] mb-4">Join Our Team</h2>
+        <p class="text-text-mid mb-6 max-w-2xl mx-auto">
           We're growing and always looking for passionate individuals who want to make a difference in the MCL community. Whether as a volunteer, advisor, or partner — we'd love to hear from you.
         </p>
         <a
           href="/contact"
-          class="inline-flex items-center px-7 py-3 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline"
+          class="inline-flex items-center px-7 py-3 bg-teal text-white font-semibold rounded-full hover:bg-teal-light transition-colors no-underline"
         >
           Get in Touch
         </a>

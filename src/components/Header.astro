@@ -82,18 +82,16 @@ const navItems: NavItem[] = [
 
 <header
   id="site-header"
-  class="fixed top-0 left-0 right-0 z-50 bg-warm-white/95 backdrop-blur-sm border-b border-sage transition-all duration-300"
+  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border transition-all duration-300"
 >
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-12" aria-label="Main navigation">
     <div class="flex items-center justify-between h-18 lg:h-20">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 no-underline shrink-0" aria-label="MCLA Home">
-        <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
-          <span class="text-white font-serif font-bold text-lg">M</span>
-        </div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-serif font-bold text-charcoal text-lg tracking-tight">MCLA</span>
-          <span class="text-[10px] text-charcoal/60 tracking-wide uppercase hidden sm:block">Mantle Cell Lymphoma Alliance</span>
+      <!-- Stacked Color-Block Logo -->
+      <a href="/" class="no-underline shrink-0" aria-label="MCLA Home">
+        <div class="flex flex-col gap-[2px] items-start">
+          <span class="bg-teal text-white font-black text-[11px] tracking-[1.5px] leading-[1.3] px-2.5 py-[3px] rounded-[3px] w-fit whitespace-nowrap">MANTLE CELL</span>
+          <span class="bg-amber text-white font-black text-[11px] tracking-[1.5px] leading-[1.3] px-2.5 py-[3px] rounded-[3px] w-fit whitespace-nowrap">LYMPHOMA</span>
+          <span class="bg-teal-deep text-white font-black text-[11px] tracking-[1.5px] leading-[1.3] px-2.5 py-[3px] rounded-[3px] w-fit whitespace-nowrap">ALLIANCE</span>
         </div>
       </a>
 
@@ -104,7 +102,7 @@ const navItems: NavItem[] = [
             {item.children ? (
               <>
                 <button
-                  class="px-3 py-2 text-[15px] text-charcoal/80 hover:text-teal-primary transition-colors flex items-center gap-1 font-medium"
+                  class="px-3 py-2 text-[15px] text-text-dark/80 hover:text-teal transition-colors flex items-center gap-1 font-semibold tracking-[0.2px]"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -114,11 +112,11 @@ const navItems: NavItem[] = [
                   </svg>
                 </button>
                 <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div class="bg-white rounded-xl shadow-lg border border-sage/50 py-2 min-w-[220px]">
+                  <div class="bg-white rounded-xl shadow-lg border border-border py-2 min-w-[220px]">
                     {item.children.map((child) => (
                       <a
                         href={child.href}
-                        class="block px-4 py-2.5 text-sm text-charcoal/80 hover:text-teal-primary hover:bg-sage/50 transition-colors no-underline"
+                        class="block px-4 py-2.5 text-sm text-text-dark/80 hover:text-teal hover:bg-cream transition-colors no-underline"
                       >
                         {child.label}
                       </a>
@@ -129,7 +127,7 @@ const navItems: NavItem[] = [
             ) : (
               <a
                 href={item.href}
-                class="px-3 py-2 text-[15px] text-charcoal/80 hover:text-teal-primary transition-colors font-medium no-underline"
+                class="px-3 py-2 text-[15px] text-text-dark/80 hover:text-teal transition-colors font-semibold tracking-[0.2px] no-underline"
               >
                 {item.label}
               </a>
@@ -138,11 +136,11 @@ const navItems: NavItem[] = [
         ))}
       </div>
 
-      <!-- Donate Button + Mobile Toggle -->
+      <!-- Mobile Toggle -->
       <div class="flex items-center gap-3">
         <button
           id="mobile-menu-btn"
-          class="lg:hidden p-2 text-charcoal hover:text-teal-primary transition-colors"
+          class="lg:hidden p-2 text-text-dark hover:text-teal transition-colors"
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
@@ -161,7 +159,7 @@ const navItems: NavItem[] = [
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="lg:hidden hidden bg-white border-t border-sage overflow-y-auto max-h-[calc(100vh-4.5rem)]"
+    class="lg:hidden hidden bg-white border-t border-border overflow-y-auto max-h-[calc(100vh-4.5rem)]"
     role="dialog"
     aria-label="Mobile navigation"
   >
@@ -171,7 +169,7 @@ const navItems: NavItem[] = [
           {item.children ? (
             <div class="mobile-dropdown">
               <button
-                class="w-full flex items-center justify-between px-3 py-3 text-charcoal/80 font-medium hover:text-teal-primary transition-colors text-left"
+                class="w-full flex items-center justify-between px-3 py-3 text-text-dark/80 font-semibold hover:text-teal transition-colors text-left"
                 aria-expanded="false"
               >
                 {item.label}
@@ -183,7 +181,7 @@ const navItems: NavItem[] = [
                 {item.children.map((child) => (
                   <a
                     href={child.href}
-                    class="block px-3 py-2 text-sm text-charcoal/70 hover:text-teal-primary transition-colors no-underline"
+                    class="block px-3 py-2 text-sm text-text-mid hover:text-teal transition-colors no-underline"
                   >
                     {child.label}
                   </a>
@@ -193,7 +191,7 @@ const navItems: NavItem[] = [
           ) : (
             <a
               href={item.href}
-              class="block px-3 py-3 text-charcoal/80 font-medium hover:text-teal-primary transition-colors no-underline"
+              class="block px-3 py-3 text-text-dark/80 font-semibold hover:text-teal transition-colors no-underline"
             >
               {item.label}
             </a>

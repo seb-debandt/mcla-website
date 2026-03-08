@@ -9,18 +9,18 @@ const { Content } = await render(page);
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>
-  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
+  <section class="py-16 md:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">{page.data.title}</h1>
+      <p class="text-xl text-text-mid leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
       {page.data.callout && (
-        <div class="bg-teal-primary/5 rounded-2xl p-8 mb-12 border border-teal-primary/10">
-          <p class="text-lg text-charcoal/80 leading-relaxed mb-0">{page.data.callout}</p>
+        <div class="bg-teal/5 rounded-2xl p-8 mb-12 border border-teal/10">
+          <p class="text-lg text-text-dark/80 leading-relaxed mb-0">{page.data.callout}</p>
         </div>
       )}
       <div class="prose max-w-none">
@@ -30,7 +30,7 @@ const { Content } = await render(page);
         <div class="not-prose mt-8">
           <a
             href={page.data.ctaUrl}
-            class="inline-flex items-center px-6 py-2.5 bg-teal-primary text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors no-underline text-sm"
+            class="inline-flex items-center px-6 py-2.5 bg-teal text-white font-semibold rounded-full hover:bg-teal-light transition-colors no-underline text-sm"
           >
             {page.data.ctaText}
           </a>

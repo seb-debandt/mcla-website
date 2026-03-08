@@ -12,25 +12,39 @@ const iconSvgs = [
   '<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />',
   '<path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />',
 ];
+
+// Icon badge background colors: teal, amber, dark
+const iconBgClasses = [
+  'bg-teal/10',
+  'bg-amber/12',
+  'bg-teal-deep/10',
+];
+
+const iconColorClasses = [
+  'text-teal',
+  'text-amber',
+  'text-teal-deep',
+];
 ---
 
-<section class="py-20 md:py-28 bg-warm-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">{heading}</h2>
-      <p class="text-charcoal/60 text-lg max-w-2xl mx-auto">
+<section class="py-20 md:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="mb-14">
+      <div class="section-label">WHAT WE DO</div>
+      <h2 class="text-[34px] md:text-[38px] font-extrabold text-text-dark tracking-[-0.5px] leading-[1.15] mb-4">{heading}</h2>
+      <p class="text-text-mid text-lg max-w-2xl">
         {subheading}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {pillars.map((pillar, i) => (
-        <div class="bg-white rounded-2xl p-8 border border-sage">
-          <div class="w-14 h-14 bg-teal-primary/10 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><Fragment set:html={iconSvgs[i] || iconSvgs[0]} /></svg>
+        <div class="bg-white rounded-2xl p-10 border border-border transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,107,110,0.08)]">
+          <div class:list={['w-14 h-14 rounded-[14px] flex items-center justify-center mb-6', iconBgClasses[i] || iconBgClasses[0]]}>
+            <svg class:list={['w-7 h-7', iconColorClasses[i] || iconColorClasses[0]]} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><Fragment set:html={iconSvgs[i] || iconSvgs[0]} /></svg>
           </div>
-          <h3 class="text-xl font-bold text-charcoal mb-3">{pillar.title}</h3>
-          <p class="text-charcoal/60 text-[15px] leading-relaxed">{pillar.description}</p>
+          <h3 class="text-xl font-extrabold text-text-dark mb-3">{pillar.title}</h3>
+          <p class="text-text-mid text-[15px] leading-[1.7]">{pillar.description}</p>
         </div>
       ))}
     </div>

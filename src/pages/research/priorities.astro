@@ -8,27 +8,27 @@ const { Content } = await render(page);
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>
-  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
+  <section class="py-16 md:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">{page.data.title}</h1>
+      <p class="text-xl text-text-mid leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
       <div class="prose max-w-none">
         <Content />
       </div>
       {page.data.ctaText && page.data.ctaUrl && (
-        <div class="mt-12 bg-sage/30 rounded-xl p-6">
-          <h3 class="text-lg font-bold text-charcoal mb-3">Support Our Research Mission</h3>
-          <p class="text-charcoal/70 mb-4">
+        <div class="mt-12 bg-warm-white rounded-xl p-6">
+          <h3 class="text-lg font-extrabold text-text-dark mb-3">Support Our Research Mission</h3>
+          <p class="text-text-mid mb-4">
             Every donation helps fund the research that will lead to better treatments and ultimately a cure for MCL.
           </p>
           <a
             href={page.data.ctaUrl}
-            class:list={["inline-flex items-center px-6 py-2.5 font-semibold rounded-lg transition-colors no-underline text-sm text-white", page.data.ctaStyle === 'coral' ? 'bg-coral hover:bg-coral-dark' : 'bg-teal-primary hover:bg-teal-dark']}
+            class:list={["inline-flex items-center px-6 py-2.5 font-bold rounded-full transition-colors no-underline text-sm text-white", page.data.ctaStyle === 'coral' ? 'bg-amber hover:bg-amber-light' : 'bg-teal hover:bg-teal-light']}
           >
             {page.data.ctaText}
           </a>

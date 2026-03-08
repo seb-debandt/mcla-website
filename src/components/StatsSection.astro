@@ -9,27 +9,26 @@ interface Props {
 const { heading, subheading, stats, source } = Astro.props;
 ---
 
-<section class="py-20 md:py-24 bg-teal-primary relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-teal-dark/50 to-transparent" aria-hidden="true"></div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<section class="py-20 md:py-24 bg-teal-deep">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center mb-14">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{heading}</h2>
-      <p class="text-white/70 text-lg max-w-2xl mx-auto">
+      <div class="section-label">BY THE NUMBERS</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white/90 tracking-[-0.5px] leading-[1.15] mb-4">{heading}</h2>
+      <p class="text-white/65 text-lg max-w-2xl mx-auto">
         {subheading}
       </p>
     </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-      {stats.map((stat) => (
-        <div class="text-center">
-          <div class="text-4xl md:text-5xl font-bold text-white mb-2 font-serif">{stat.value}</div>
-          <div class="text-white/70 text-sm md:text-base">{stat.label}</div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
+      {stats.map((stat, i) => (
+        <div class:list={['text-center py-6 px-4', i < stats.length - 1 && 'lg:border-r lg:border-white/10']}>
+          <div class="text-[36px] md:text-[48px] font-black text-amber-light mb-2 tracking-[-1px]">{stat.value}</div>
+          <div class="text-white/65 text-sm md:text-[14px] font-medium tracking-[0.3px]">{stat.label}</div>
         </div>
       ))}
     </div>
 
-    <p class="text-center text-white/40 text-xs mt-12">
+    <p class="text-center text-white/35 text-[13px] mt-12 italic">
       {source}
     </p>
   </div>

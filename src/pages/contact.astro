@@ -8,41 +8,41 @@ if (page.data.draft) return Astro.redirect('/404');
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>
-  <section class="py-16 md:py-20 bg-gradient-to-br from-teal-primary/5 via-warm-white to-sage/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">{page.data.title}</h1>
-      <p class="text-xl text-charcoal/60 leading-relaxed">{page.data.subtitle}</p>
+  <section class="py-16 md:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark tracking-[-0.5px] mb-6">{page.data.title}</h1>
+      <p class="text-xl text-text-mid leading-relaxed">{page.data.subtitle}</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-warm-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
         <div class="lg:col-span-3">
           <ContactForm />
         </div>
 
         <div class="lg:col-span-2 space-y-8">
-          <div class="bg-sage/30 rounded-2xl p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-4">Get in Touch</h3>
+          <div class="bg-warm-white rounded-2xl p-6">
+            <h3 class="text-lg font-extrabold text-text-dark mb-4">Get in Touch</h3>
             <div class="space-y-4">
               {page.data.contacts.map((contact: { label: string; email: string }) => (
                 <div>
-                  <p class="text-sm font-medium text-charcoal">{contact.label}</p>
-                  <a href={`mailto:${contact.email}`} class="text-teal-primary text-sm no-underline">{contact.email}</a>
+                  <p class="text-sm font-medium text-text-dark">{contact.label}</p>
+                  <a href={`mailto:${contact.email}`} class="text-teal text-sm no-underline">{contact.email}</a>
                 </div>
               ))}
             </div>
           </div>
 
-          <div class="bg-white rounded-2xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-4">Response Time</h3>
-            <p class="text-charcoal/60 text-sm leading-relaxed">{page.data.responseTime}</p>
+          <div class="bg-white rounded-2xl border border-border p-6">
+            <h3 class="text-lg font-extrabold text-text-dark mb-4">Response Time</h3>
+            <p class="text-text-mid text-sm leading-relaxed">{page.data.responseTime}</p>
           </div>
 
-          <div class="bg-white rounded-2xl border border-sage p-6">
-            <h3 class="text-lg font-bold text-charcoal mb-4">Important Note</h3>
-            <p class="text-charcoal/60 text-sm leading-relaxed">{page.data.importantNote}</p>
+          <div class="bg-white rounded-2xl border border-border p-6">
+            <h3 class="text-lg font-extrabold text-text-dark mb-4">Important Note</h3>
+            <p class="text-text-mid text-sm leading-relaxed">{page.data.importantNote}</p>
           </div>
         </div>
       </div>
