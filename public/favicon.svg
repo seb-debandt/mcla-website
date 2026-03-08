@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0D7377"/>
-  <text x="16" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="white">M</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect x="0" y="0" width="128" height="128" rx="16" fill="#FAFAF8"/>
+  <rect x="22" y="28" width="84" height="22" rx="6" fill="#0A6B6E"/>
+  <rect x="22" y="54" width="62" height="22" rx="6" fill="#D4864E"/>
+  <rect x="22" y="80" width="42" height="22" rx="6" fill="#1A3A3C"/>
 </svg>
