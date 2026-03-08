@@ -1,10 +1,12 @@
 ---
-title: "Research Priorities"
-subtitle: "Focusing on the science that will make the biggest difference for MCL patients."
-description: "MCLA's research priorities focus on areas with the greatest potential to improve outcomes for MCL patients."
-ctaText: "Donate to Research"
-ctaUrl: "/donate"
-ctaStyle: "coral"
+title: Research Priorities
+draft: true
+subtitle: Focusing on the science that will make the biggest difference for MCL patients.
+description: MCLA's research priorities focus on areas with the greatest
+  potential to improve outcomes for MCL patients.
+ctaText: Donate to Research
+ctaUrl: /donate
+ctaStyle: coral
 ---
 
 MCLA prioritizes research that addresses the most critical unanswered questions in MCL and has the greatest potential to improve patient outcomes. Our priorities are shaped by input from our medical advisory board, researchers in the field, and the MCL patient community.
