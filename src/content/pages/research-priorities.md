@@ -1,5 +1,8 @@
 ---
 title: Research Priorities
+navMenu: "Research"
+navLabel: "Our Priorities"
+navOrder: 2
 draft: true
 subtitle: Focusing on the science that will make the biggest difference for MCL patients.
 description: MCLA's research priorities focus on areas with the greatest

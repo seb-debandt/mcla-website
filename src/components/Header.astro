@@ -1,12 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-const allPages = await getCollection('pages');
-const draftSlugs = new Set(
-  allPages.filter(p => p.data.draft).map(p => p.id)
-);
-
-// Map page slug to nav href
+// Map content slugs to their URL paths
 const slugToHref: Record<string, string> = {
   'mission': '/about/mission',
   'our-story': '/about/our-story',
@@ -23,68 +18,67 @@ const slugToHref: Record<string, string> = {
   'partner': '/get-involved/partner',
   'contact': '/contact',
   'donate': '/donate',
+  'home': '/',
 };
 
-const hrefToSlug = Object.fromEntries(
-  Object.entries(slugToHref).map(([slug, href]) => [href, slug])
-);
+// Build nav dynamically from CMS data
+const allPages = await getCollection('pages');
+const menuPages = allPages.filter(p => !p.data.draft && p.data.navMenu && p.data.navMenu !== 'None');
 
-function isDraft(href: string) {
-  const slug = hrefToSlug[href];
-  return slug ? draftSlugs.has(slug) : false;
+// Group by navMenu, sort by navOrder
+const groups: Record<string, { label: string; href: string; order: number }[]> = {};
+for (const page of menuPages) {
+  const menu = page.data.navMenu!;
+  if (!groups[menu]) groups[menu] = [];
+  groups[menu].push({
+    label: page.data.navLabel || page.data.title,
+    href: slugToHref[page.id] || `/${page.id}`,
+    order: page.data.navOrder ?? 99,
+  });
+}
+for (const key of Object.keys(groups)) {
+  groups[key].sort((a, b) => a.order - b.order);
+}
+
+// Hardcoded items for pages not in the pages collection
+const hardcodedChildren: Record<string, { label: string; href: string; order: number }[]> = {
+  'About': [{ label: 'Our Team', href: '/about/team', order: 3 }],
+};
+
+// Merge hardcoded items into groups
+for (const [menu, items] of Object.entries(hardcodedChildren)) {
+  if (!groups[menu]) groups[menu] = [];
+  groups[menu].push(...items);
+  groups[menu].sort((a, b) => a.order - b.order);
 }
 
 type NavChild = { label: string; href: string };
 type NavItem = { label: string; href?: string; children?: NavChild[] };
 
-const allNavItems: NavItem[] = [
-  {
-    label: 'About',
-    children: [
-      { label: 'Our Mission', href: '/about/mission' },
-      { label: 'Our Story', href: '/about/our-story' },
-      { label: 'Our Team', href: '/about/team' },
-    ],
-  },
-  {
-    label: 'Understanding MCL',
-    children: [
-      { label: 'What Is MCL?', href: '/understanding-mcl/what-is-mcl' },
-      { label: 'Newly Diagnosed', href: '/understanding-mcl/newly-diagnosed' },
-      { label: 'Treatment Options', href: '/understanding-mcl/treatment-options' },
-      { label: 'Find a Specialist', href: '/understanding-mcl/find-specialist' },
-      { label: 'Caregiver Support', href: '/understanding-mcl/caregiver-support' },
-    ],
-  },
-  {
-    label: 'Research',
-    children: [
-      { label: 'Research Overview', href: '/research' },
-      { label: 'Our Priorities', href: '/research/priorities' },
-      { label: 'For Researchers', href: '/research/for-researchers' },
-    ],
-  },
-  { label: 'News', href: '/news' },
-  {
-    label: 'Get Involved',
-    children: [
-      { label: 'Ways to Help', href: '/get-involved' },
-      { label: 'Volunteer', href: '/get-involved/volunteer' },
-      { label: 'Partner With Us', href: '/get-involved/partner' },
-    ],
-  },
-  { label: 'Contact', href: '/contact' },
-];
+// Define menu group display order
+const menuOrder = ['About', 'Understanding MCL', 'Research'];
+const dropdownItems: NavItem[] = menuOrder
+  .filter(name => groups[name]?.length)
+  .map(name => ({ label: name, children: groups[name].map(({ label, href }) => ({ label, href })) }));
 
-// Filter out draft pages from nav
-const navItems = allNavItems
-  .filter(item => !item.href || !isDraft(item.href))
-  .map(item => {
-    if (!item.children) return item;
-    const filtered = item.children.filter(child => !isDraft(child.href));
-    return filtered.length > 0 ? { ...item, children: filtered } : null;
-  })
-  .filter(Boolean) as NavItem[];
+// News is hardcoded (from blog collection, not pages)
+const newsItem: NavItem = { label: 'News', href: '/news' };
+
+// Get Involved dropdown
+const getInvolvedItem: NavItem | null = groups['Get Involved']?.length
+  ? { label: 'Get Involved', children: groups['Get Involved'].map(({ label, href }) => ({ label, href })) }
+  : null;
+
+// Top Level items (like Contact)
+const topLevelItems: NavItem[] = (groups['Top Level'] || [])
+  .map(({ label, href }) => ({ label, href }));
+
+const navItems: NavItem[] = [
+  ...dropdownItems,
+  newsItem,
+  ...(getInvolvedItem ? [getInvolvedItem] : []),
+  ...topLevelItems,
+];
 ---
 
 <header

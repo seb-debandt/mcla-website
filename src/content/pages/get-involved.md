@@ -1,5 +1,8 @@
 ---
 title: "Get Involved"
+navMenu: "Get Involved"
+navLabel: "Ways to Help"
+navOrder: 1
 subtitle: "Every action — large or small — helps advance our mission. Here's how you can make a difference."
 description: "Join the MCLA mission. Volunteer, donate, partner, share your story, or fundraise — there are many ways to make a difference for the MCL community."
 ways:

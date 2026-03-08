@@ -1,5 +1,6 @@
 ---
 title: "Your Impact Starts Here"
+navMenu: "None"
 subtitle: "Every gift — no matter the size — brings us closer to better treatments and a cure for mantle cell lymphoma."
 description: "Support the Mantle Cell Lymphoma Alliance. Your tax-deductible donation funds research, patient education, and support programs."
 amounts:

@@ -1,5 +1,8 @@
 ---
 title: Contact Us
+navMenu: "Top Level"
+navLabel: "Contact"
+navOrder: 1
 subtitle: We'd love to hear from you. Whether you have questions, need
   resources, or want to get involved — reach out.
 description: Get in touch with the Mantle Cell Lymphoma Alliance. We're here to

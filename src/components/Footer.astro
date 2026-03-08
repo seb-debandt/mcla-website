@@ -1,70 +1,62 @@
 ---
 import { getCollection } from 'astro:content';
 
-const allPages = await getCollection('pages');
-const draftSlugs = new Set(
-  allPages.filter(p => p.data.draft).map(p => p.id)
-);
-
-const hrefToSlug: Record<string, string> = {
-  '/about/mission': 'mission',
-  '/about/our-story': 'our-story',
-  '/understanding-mcl/what-is-mcl': 'what-is-mcl',
-  '/understanding-mcl/newly-diagnosed': 'newly-diagnosed',
-  '/understanding-mcl/treatment-options': 'treatment-options',
-  '/understanding-mcl/find-specialist': 'find-specialist',
-  '/understanding-mcl/caregiver-support': 'caregiver-support',
-  '/research': 'research',
-  '/research/priorities': 'research-priorities',
-  '/research/for-researchers': 'for-researchers',
-  '/get-involved': 'get-involved',
-  '/get-involved/volunteer': 'volunteer',
-  '/get-involved/partner': 'partner',
-  '/contact': 'contact',
-  '/donate': 'donate',
+// Map content slugs to their URL paths
+const slugToHref: Record<string, string> = {
+  'mission': '/about/mission',
+  'our-story': '/about/our-story',
+  'what-is-mcl': '/understanding-mcl/what-is-mcl',
+  'newly-diagnosed': '/understanding-mcl/newly-diagnosed',
+  'treatment-options': '/understanding-mcl/treatment-options',
+  'find-specialist': '/understanding-mcl/find-specialist',
+  'caregiver-support': '/understanding-mcl/caregiver-support',
+  'research': '/research',
+  'research-priorities': '/research/priorities',
+  'for-researchers': '/research/for-researchers',
+  'get-involved': '/get-involved',
+  'volunteer': '/get-involved/volunteer',
+  'partner': '/get-involved/partner',
+  'contact': '/contact',
+  'donate': '/donate',
+  'home': '/',
 };
 
-function isDraft(href: string) {
-  const slug = hrefToSlug[href];
-  return slug ? draftSlugs.has(slug) : false;
+// Build footer dynamically from CMS data
+const allPages = await getCollection('pages');
+const menuPages = allPages.filter(p => !p.data.draft && p.data.navMenu && p.data.navMenu !== 'None');
+
+// Group by navMenu, sort by navOrder
+const groups: Record<string, { label: string; href: string; order: number }[]> = {};
+for (const page of menuPages) {
+  const menu = page.data.navMenu!;
+  if (!groups[menu]) groups[menu] = [];
+  groups[menu].push({
+    label: page.data.navLabel || page.data.title,
+    href: slugToHref[page.id] || `/${page.id}`,
+    order: page.data.navOrder ?? 99,
+  });
+}
+for (const key of Object.keys(groups)) {
+  groups[key].sort((a, b) => a.order - b.order);
 }
 
-const allQuickLinks = [
-  {
-    title: 'About MCLA',
-    links: [
-      { label: 'Our Mission', href: '/about/mission' },
-      { label: 'Our Story', href: '/about/our-story' },
-      { label: 'Our Team', href: '/about/team' },
-    ],
-  },
-  {
-    title: 'Understanding MCL',
-    links: [
-      { label: 'What Is MCL?', href: '/understanding-mcl/what-is-mcl' },
-      { label: 'Newly Diagnosed', href: '/understanding-mcl/newly-diagnosed' },
-      { label: 'Treatment Options', href: '/understanding-mcl/treatment-options' },
-      { label: 'Find a Specialist', href: '/understanding-mcl/find-specialist' },
-    ],
-  },
-  {
-    title: 'Get Involved',
-    links: [
-      { label: 'Donate', href: '/donate' },
-      { label: 'Volunteer', href: '/get-involved/volunteer' },
-      { label: 'Partner With Us', href: '/get-involved/partner' },
-      { label: 'News & Updates', href: '/news' },
-    ],
-  },
-];
+// Footer columns: About, Understanding MCL, Get Involved (with hardcoded extras)
+type FooterColumn = { title: string; links: { label: string; href: string }[] };
+const quickLinks: FooterColumn[] = [];
 
-// Filter out draft pages
-const quickLinks = allQuickLinks
-  .map(col => ({
-    ...col,
-    links: col.links.filter(link => !isDraft(link.href)),
-  }))
-  .filter(col => col.links.length > 0);
+// About MCLA column
+const aboutLinks = [...(groups['About'] || []).map(({ label, href }) => ({ label, href }))];
+aboutLinks.push({ label: 'Our Team', href: '/about/team' }); // hardcoded (team collection page)
+if (aboutLinks.length) quickLinks.push({ title: 'About MCLA', links: aboutLinks });
+
+// Understanding MCL column
+const uLinks = (groups['Understanding MCL'] || []).map(({ label, href }) => ({ label, href }));
+if (uLinks.length) quickLinks.push({ title: 'Understanding MCL', links: uLinks });
+
+// Get Involved column (+ hardcoded News)
+const giLinks = [...(groups['Get Involved'] || []).map(({ label, href }) => ({ label, href }))];
+giLinks.push({ label: 'News & Updates', href: '/news' }); // hardcoded (blog listing page)
+if (giLinks.length) quickLinks.push({ title: 'Get Involved', links: giLinks });
 
 const currentYear = new Date().getFullYear();
 ---

@@ -1,5 +1,8 @@
 ---
 title: "Volunteer With MCLA"
+navMenu: "Get Involved"
+navLabel: "Volunteer"
+navOrder: 2
 subtitle: "Your time and skills can help us reach more patients and families. Here's how you can contribute."
 description: "Volunteer with MCLA and help make a difference for the mantle cell lymphoma community. Multiple opportunities available."
 ctaText: "Sign Up to Volunteer"

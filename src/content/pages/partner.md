@@ -1,5 +1,8 @@
 ---
 title: "Partner With Us"
+navMenu: "Get Involved"
+navLabel: "Partner With Us"
+navOrder: 3
 subtitle: "Together, we can accelerate progress for the MCL community."
 description: "Partner with MCLA to advance MCL care and research. Medical institutions, research organizations, and corporate partners welcome."
 ctaText: "Contact Us About Partnerships"

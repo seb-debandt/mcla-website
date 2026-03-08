@@ -1,5 +1,8 @@
 ---
 title: For Researchers
+navMenu: "Research"
+navLabel: "For Researchers"
+navOrder: 3
 draft: true
 subtitle: Partnering with the research community to advance MCL science.
 description: Partner with MCLA on MCL research. Learn about collaboration

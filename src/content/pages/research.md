@@ -1,5 +1,8 @@
 ---
 title: Research
+navMenu: "Research"
+navLabel: "Research Overview"
+navOrder: 1
 draft: true
 subtitle: Supporting the science that will transform MCL outcomes.
 description: MCLA supports targeted research to advance better treatments and a

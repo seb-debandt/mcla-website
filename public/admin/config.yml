@@ -66,6 +66,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "Home" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Highlighted Text", name: "heroHighlight", widget: "string" }
@@ -101,6 +104,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Mission Statement", name: "missionStatement", widget: "text" }
@@ -118,6 +124,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -131,6 +140,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -142,6 +154,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -154,6 +169,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -165,6 +183,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -179,6 +200,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Show Medical Disclaimer", name: "showMedicalDisclaimer", widget: "boolean", default: true }
@@ -200,6 +224,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "Intro Text", name: "intro", widget: "text" }
@@ -223,6 +250,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -236,6 +266,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -249,6 +282,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - label: "Ways to Help"
@@ -267,6 +303,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -286,6 +325,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - { label: "CTA Button Text", name: "ctaText", widget: "string", required: false }
@@ -299,6 +341,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - label: "Contact Channels"
@@ -316,6 +361,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Navigation Menu", name: "navMenu", widget: "select", options: ["None", "About", "Understanding MCL", "Research", "Get Involved", "Top Level"], default: "None", required: false }
+          - { label: "Navigation Label", name: "navLabel", widget: "string", required: false, hint: "Text shown in menu (defaults to page title if empty)" }
+          - { label: "Navigation Order", name: "navOrder", widget: "number", value_type: "int", required: false, hint: "Position in menu group (1=first, 2=second, etc.)" }
           - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
           - { label: "Meta Description", name: "description", widget: "text", required: false }
           - label: "Donation Amounts"

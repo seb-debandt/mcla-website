@@ -1,5 +1,8 @@
 ---
 title: "Our Story"
+navMenu: "About"
+navLabel: "Our Story"
+navOrder: 2
 subtitle: "Born from personal experience. Built for the entire MCL community."
 description: "Learn how the Mantle Cell Lymphoma Alliance was founded and our journey to support the MCL community."
 ctaText: "Join Our Mission"

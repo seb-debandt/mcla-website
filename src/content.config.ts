@@ -30,6 +30,10 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     draft: z.boolean().optional(),
+    // Navigation fields
+    navMenu: z.enum(['None', 'About', 'Understanding MCL', 'Research', 'Get Involved', 'Top Level']).optional(),
+    navLabel: z.string().optional(),
+    navOrder: z.number().optional(),
     subtitle: z.string().optional(),
     description: z.string().optional(),
     // Home page fields

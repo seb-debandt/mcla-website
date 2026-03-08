@@ -1,5 +1,8 @@
 ---
 title: Caregiver Support
+navMenu: "Understanding MCL"
+navLabel: "Caregiver Support"
+navOrder: 5
 draft: true
 subtitle: Caring for someone with MCL is a journey. Here's how to support your
   loved one — and yourself.

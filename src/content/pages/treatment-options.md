@@ -1,5 +1,8 @@
 ---
 title: Treatment Options
+navMenu: "Understanding MCL"
+navLabel: "Treatment Options"
+navOrder: 3
 subtitle: The treatment landscape for MCL has evolved significantly. Here's an
   overview of current approaches.
 description: An overview of current treatment options for mantle cell lymphoma,

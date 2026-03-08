@@ -1,5 +1,6 @@
 ---
 title: "Home"
+navMenu: "None"
 description: "The Mantle Cell Lymphoma Alliance — supporting patients, caregivers, and researchers with trusted information, expert-guided support, and targeted research."
 heroTitle: "Advancing hope for those facing"
 heroHighlight: "mantle cell lymphoma."
