@@ -1,6 +1,6 @@
 ---
 name: Olivier de Bandt
-title: Co-founder and Treasurer
+title: Co-founder and Board Treasurer
 roleType: board
 bio: Olivier de Bandt is co-founder and Treasurer of MCLA. Research and
   education are very important to him. He has been teaching in graduate schools
