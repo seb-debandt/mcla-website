@@ -1,5 +1,43 @@
 ---
-const navItems = [
+import { getCollection } from 'astro:content';
+
+const allPages = await getCollection('pages');
+const draftSlugs = new Set(
+  allPages.filter(p => p.data.draft).map(p => p.id)
+);
+
+// Map page slug to nav href
+const slugToHref: Record<string, string> = {
+  'mission': '/about/mission',
+  'our-story': '/about/our-story',
+  'what-is-mcl': '/understanding-mcl/what-is-mcl',
+  'newly-diagnosed': '/understanding-mcl/newly-diagnosed',
+  'treatment-options': '/understanding-mcl/treatment-options',
+  'find-specialist': '/understanding-mcl/find-specialist',
+  'caregiver-support': '/understanding-mcl/caregiver-support',
+  'research': '/research',
+  'research-priorities': '/research/priorities',
+  'for-researchers': '/research/for-researchers',
+  'get-involved': '/get-involved',
+  'volunteer': '/get-involved/volunteer',
+  'partner': '/get-involved/partner',
+  'contact': '/contact',
+  'donate': '/donate',
+};
+
+const hrefToSlug = Object.fromEntries(
+  Object.entries(slugToHref).map(([slug, href]) => [href, slug])
+);
+
+function isDraft(href: string) {
+  const slug = hrefToSlug[href];
+  return slug ? draftSlugs.has(slug) : false;
+}
+
+type NavChild = { label: string; href: string };
+type NavItem = { label: string; href?: string; children?: NavChild[] };
+
+const allNavItems: NavItem[] = [
   {
     label: 'About',
     children: [
@@ -37,6 +75,16 @@ const navItems = [
   },
   { label: 'Contact', href: '/contact' },
 ];
+
+// Filter out draft pages from nav
+const navItems = allNavItems
+  .filter(item => !item.href || !isDraft(item.href))
+  .map(item => {
+    if (!item.children) return item;
+    const filtered = item.children.filter(child => !isDraft(child.href));
+    return filtered.length > 0 ? { ...item, children: filtered } : null;
+  })
+  .filter(Boolean) as NavItem[];
 ---
 
 <header
