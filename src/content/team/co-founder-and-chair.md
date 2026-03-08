@@ -1,6 +1,6 @@
 ---
 name: Sebastien de Bandt
-title: Co-founder and Chair
+title: Co-founder and Board Chair
 roleType: board
 bio: >-
   Sebastien de Bandt is the co-founder and Chair of the MCLA. In 2022, at the
