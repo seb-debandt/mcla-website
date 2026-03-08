@@ -3,10 +3,9 @@ name: Kristine Tuchek
 title: Co-founder and Board member
 roleType: board
 bio: >-
-  Kristine Tuchek, PA-C, is a co-founder of the Mantle Cell Lymphoma Alliance
-  (MCLA). A physician assistant for more than 25 years, Kris spent her career in
-  emergency medicine caring for patients during some of the most critical
-  moments of their lives.
+  Kristine Tuchek, PA-C, is co-founder of the MCLA. A physician assistant for
+  more than 25 years, Kris spent her career in emergency medicine caring for
+  patients during some of the most critical moments of their lives.
 
   In 2022, at age 60, she was diagnosed with an aggressive, advanced form of mantle cell lymphoma, forcing her into early retirement from the profession she loved. After multiple treatments, she achieved remission in June 2024 following CAR-T therapy.
 
