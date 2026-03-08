@@ -3,7 +3,7 @@ title: What Is Mantle Cell Lymphoma?
 draft: false
 navMenu: Understanding MCL
 navLabel: What Is MCL?
-navOrder: 2
+navOrder: 1
 subtitle: Understanding the basics of this rare blood cancer.
 description: Learn about mantle cell lymphoma (MCL) — a rare type of non-Hodgkin
   lymphoma, its causes, symptoms, diagnosis, and what makes it unique.
