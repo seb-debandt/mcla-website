@@ -1,9 +1,9 @@
 ---
 title: Find a Specialist
-navMenu: "Understanding MCL"
-navLabel: "Find a Specialist"
+draft: false
+navMenu: Understanding MCL
+navLabel: Find a Specialist
 navOrder: 4
-draft: true
 subtitle: Why specialist experience matters for MCL, and how to find the right care team.
 description: Find a hematologist-oncologist with experience treating mantle cell
   lymphoma. Why specialist care matters and how to find the right doctor.
@@ -15,36 +15,49 @@ callout: Because MCL is rare and treatment is evolving rapidly, we strongly
 ctaText: Contact MCLA
 ctaUrl: /contact
 ---
-
 ## Why Specialist Care Matters
 
-MCL treatment decisions are complex and nuanced. An experienced specialist is more likely to:
+Finding the right specialist can make a meaningful difference when navigating a rare cancer like mantle cell  lymphoma. Because MCL is uncommon, it’s important to seek care from clinicians and centers with **deep experience in lymphoma**, access to **modern treatments**, and participation in **clinical research**.
 
-- Accurately characterize your specific disease subtype
-- Know the latest treatment options and clinical trial opportunities
-- Have experience managing the unique side effects and challenges of MCL therapies
-- Be connected to a network of MCL-focused researchers and clinicians
 
-## How to Find a Specialist
+This page offers simple steps to help you identify the right expert for your care.
 
-Here are several ways to connect with MCL-experienced physicians:
+### What Makes an MCL Specialist?
 
-1. **Major Cancer Centers:** NCI-designated comprehensive cancer centers typically have lymphoma specialists with MCL experience. Consider scheduling a consultation, even if your ongoing care happens locally.
+A true MCL specialist is typically a **hematologist/oncologist** who:
 
-2. **Ask your oncologist:** Your current doctor may be able to recommend a colleague with specific MCL expertise for a second opinion.
+* Focuses on 
 
-3. **Clinical trial sites:** Institutions running MCL clinical trials often have the most experienced specialists.
+  **lymphomas**
 
-4. **Contact MCLA:** Our team can help point you toward MCL-experienced physicians in your region.
+  , not general oncology
+* Treats a 
 
-## Questions to Ask a Potential Specialist
+  **high volume**
 
-- How many MCL patients do you currently treat?
-- What is your recommended treatment approach for my specific situation?
-- Are you involved in MCL research or clinical trials?
-- Can you coordinate care with my local oncologist?
-- What support services are available at your center?
+   of MCL patients each year
+* Has access to 
 
-## Telemedicine Options
+  **advanced therapies**
 
-Many major cancer centers now offer telemedicine consultations, making it easier for patients in remote areas to access expert opinions without traveling. Ask about virtual consultation options when scheduling your appointment.
+   (BTK inhibitors, CAR‑T, stem cell transplant)
+* Participates in 
+
+  **clinical trials**
+
+   or collaborates with research centers
+* Works within a 
+
+  **multidisciplinary team**
+
+   (oncology, pathology, radiology, transplant)
+
+
+
+You don’t need to transfer all your care to a major center—many people receive **shared care**, combining local treatment with expert guidance from a specialist.
+
+### You’re Not Alone
+
+The Mantle Cell Lymphoma Alliance is here to help you navigate your options. If you’d like, we can guide you toward specialists, centers, or clinical trial resources that match your needs and location.
+
+Just let us know what matters most to you—**distance, expertise, second opinions, or access to advanced therapies**—and we’ll help you take the next step with clarity and confidence.
