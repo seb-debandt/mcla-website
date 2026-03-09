@@ -31,28 +31,10 @@ A true MCL specialist is typically a **hematologist/oncologist** who:
   **lymphomas**
 
   , not general oncology
-* Treats a 
-
-  **high volume**
-
-   of MCL patients each year
-* Has access to 
-
-  **advanced therapies**
-
-   (BTK inhibitors, CAR‑T, stem cell transplant)
-* Participates in 
-
-  **clinical trials**
-
-   or collaborates with research centers
-* Works within a 
-
-  **multidisciplinary team**
-
-   (oncology, pathology, radiology, transplant)
-
-
+* Treats a **high volume** of MCL patients each year
+* Has access to **advanced therapies** (BTK inhibitors, CAR‑T, stem cell transplant)
+* Participates in **clinical trials** or collaborates with research centers
+* Works within a **multidisciplinary team** (oncology, pathology, radiology, transplant)
 
 You don’t need to transfer all your care to a major center—many people receive **shared care**, combining local treatment with expert guidance from a specialist.
 
