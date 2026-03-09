@@ -19,18 +19,13 @@ ctaUrl: /contact
 
 Finding the right specialist can make a meaningful difference when navigating a rare cancer like mantle cell  lymphoma. Because MCL is uncommon, it’s important to seek care from clinicians and centers with **deep experience in lymphoma**, access to **modern treatments**, and participation in **clinical research**.
 
-
 This page offers simple steps to help you identify the right expert for your care.
 
 ### What Makes an MCL Specialist?
 
 A true MCL specialist is typically a **hematologist/oncologist** who:
 
-* Focuses on 
-
-  **lymphomas**
-
-  , not general oncology
+* Focuses on **lymphomas**, not general oncology
 * Treats a **high volume** of MCL patients each year
 * Has access to **advanced therapies** (BTK inhibitors, CAR‑T, stem cell transplant)
 * Participates in **clinical trials** or collaborates with research centers
