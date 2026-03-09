@@ -10,6 +10,6 @@ bio: >-
   In 2022, at age 60, she was diagnosed with an aggressive, advanced form of mantle cell lymphoma, forcing her into early retirement from the profession she loved. After multiple treatments, she achieved remission in June 2024 following CAR-T therapy.
 
   Experiencing mantle cell lymphoma as both a clinician and a patient drives her commitment to ensuring patients have access to clear information, expert guidance, and research that will lead to better treatments and ultimately a cure.
-photo: ""
+photo: /uploads/facetune_05-12-2025-14-38-46.jpeg
 order: 5
 ---
