@@ -61,69 +61,15 @@ if (mantleCellIdx !== -1 && lymphomaIdx !== -1) {
         </div>
       </div>
 
-      <!-- Right: Photo collage -->
-      <div class="hidden lg:block relative" style="height: 540px;">
-        <!-- Row 1: Three photos across the top -->
-        <!-- Photo 1: Woman with glasses — large, top-left -->
-        <div class="absolute rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] border-[3px] border-white z-30"
-             style="top: 0; left: 2%; width: 48%; height: 280px; transform: rotate(-2deg);">
-          <img src="/uploads/heroes/patient-1.jpg" alt="MCLA community member" class="w-full h-full object-cover object-top block" loading="eager" />
-        </div>
-
-        <!-- Photo 2: Warriors flexing — small, top-center -->
-        <div class="absolute rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] border-[3px] border-white z-20"
-             style="top: 10px; left: 44%; width: 28%; height: 180px; transform: rotate(3deg);">
-          <img src="/uploads/heroes/patient-2.jpg" alt="MCLA community members" class="w-full h-full object-cover object-top block" loading="eager" />
-        </div>
-
-        <!-- Photo 3: Couple Las Vegas — top-right -->
-        <div class="absolute rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] border-[3px] border-white z-10"
-             style="top: -5px; right: -3%; width: 30%; height: 220px; transform: rotate(4deg);">
-          <img src="/uploads/heroes/patient-3.jpg" alt="MCLA community members" class="w-full h-full object-cover object-top block" loading="eager" />
-        </div>
-
-        <!-- Row 2: Two photos on the bottom -->
-        <!-- Photo 4: Couple at dinner — bottom-left -->
-        <div class="absolute rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] border-[3px] border-white z-20"
-             style="bottom: 20px; left: 8%; width: 38%; height: 220px; transform: rotate(2deg);">
-          <img src="/uploads/heroes/patient-5.jpg" alt="MCLA community members" class="w-full h-full object-cover object-center block" loading="lazy" />
-        </div>
-
-        <!-- Photo 5: Fishing woman — bottom-right -->
-        <div class="absolute rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] border-[3px] border-white z-30"
-             style="bottom: 10px; right: 2%; width: 36%; height: 230px; transform: rotate(-3deg);">
-          <img src="/uploads/heroes/patient-4.jpg" alt="MCLA community member" class="w-full h-full object-cover object-top block" loading="lazy" />
-        </div>
+      <!-- Right: Photo montage -->
+      <div class="hidden lg:block">
+        <img src="/uploads/heroes/montage.jpg" alt="MCLA community members — patients, caregivers, and supporters" class="w-full h-auto rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]" loading="eager" />
       </div>
 
-      <!-- Mobile: scrolling photo strip -->
-      <div class="lg:hidden flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
-        <div class="flex-none w-48 snap-start rounded-2xl overflow-hidden shadow-lg border-[3px] border-white rotate-[-1deg]">
-          <img src="/uploads/heroes/patient-1.jpg" alt="MCLA community member" class="w-full h-60 object-cover" loading="eager" />
-        </div>
-        <div class="flex-none w-48 snap-start rounded-2xl overflow-hidden shadow-lg border-[3px] border-white rotate-[1deg]">
-          <img src="/uploads/heroes/patient-2.jpg" alt="MCLA community members" class="w-full h-60 object-cover" loading="eager" />
-        </div>
-        <div class="flex-none w-48 snap-start rounded-2xl overflow-hidden shadow-lg border-[3px] border-white rotate-[-1deg]">
-          <img src="/uploads/heroes/patient-3.jpg" alt="MCLA community members" class="w-full h-60 object-cover" loading="eager" />
-        </div>
-        <div class="flex-none w-48 snap-start rounded-2xl overflow-hidden shadow-lg border-[3px] border-white rotate-[1deg]">
-          <img src="/uploads/heroes/patient-5.jpg" alt="MCLA community members" class="w-full h-60 object-cover" loading="lazy" />
-        </div>
-        <div class="flex-none w-48 snap-start rounded-2xl overflow-hidden shadow-lg border-[3px] border-white rotate-[-1deg]">
-          <img src="/uploads/heroes/patient-4.jpg" alt="MCLA community member" class="w-full h-60 object-cover" loading="lazy" />
-        </div>
+      <!-- Mobile: Photo montage -->
+      <div class="lg:hidden -mx-2">
+        <img src="/uploads/heroes/montage.jpg" alt="MCLA community members — patients, caregivers, and supporters" class="w-full h-auto rounded-2xl shadow-lg" loading="eager" />
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-</style>
