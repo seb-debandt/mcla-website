@@ -7,31 +7,74 @@
     <p class="text-text-mid mb-8 max-w-xl mx-auto">
       Receive the latest updates on MCL research, patient resources, and community events delivered to your inbox.
     </p>
-    <form
-      name="newsletter"
-      method="POST"
-      data-netlify="true"
-      class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-    >
-      <input type="hidden" name="form-name" value="newsletter" />
-      <label for="newsletter-email" class="sr-only">Email address</label>
-      <input
-        type="email"
-        name="email"
-        id="newsletter-email"
-        required
-        placeholder="Your email address"
-        class="flex-1 px-6 py-4 border-2 border-[#d8d4ce] rounded-full text-text-dark placeholder-text-light focus:outline-none focus:border-teal text-[15px] bg-cream transition-colors duration-200"
-      />
-      <button
-        type="submit"
-        class="px-7 py-4 bg-teal hover:bg-teal-light text-white font-bold rounded-full transition-all duration-200 hover:-translate-y-[1px] whitespace-nowrap tracking-[0.3px]"
+    <div id="newsletter-wrapper">
+      <form
+        id="newsletter-form"
+        class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
       >
-        Subscribe
-      </button>
-    </form>
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input
+          type="email"
+          name="email"
+          id="newsletter-email"
+          required
+          placeholder="Your email address"
+          class="flex-1 px-6 py-4 border-2 border-[#d8d4ce] rounded-full text-text-dark placeholder-text-light focus:outline-none focus:border-teal text-[15px] bg-cream transition-colors duration-200"
+        />
+        <button
+          type="submit"
+          id="newsletter-btn"
+          class="px-7 py-4 bg-teal hover:bg-teal-light text-white font-bold rounded-full transition-all duration-200 hover:-translate-y-[1px] whitespace-nowrap tracking-[0.3px]"
+        >
+          Subscribe
+        </button>
+      </form>
+      <p id="newsletter-error" class="text-red-600 text-sm mt-3 hidden"></p>
+    </div>
     <p class="text-text-light text-xs mt-4">
       We respect your privacy. Unsubscribe at any time.
     </p>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById("newsletter-form");
+  const btn = document.getElementById("newsletter-btn");
+  const wrapper = document.getElementById("newsletter-wrapper");
+  const errorEl = document.getElementById("newsletter-error");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorEl?.classList.add("hidden");
+
+    const email = new FormData(form).get("email");
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+
+    try {
+      const res = await fetch("/.netlify/functions/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        wrapper.innerHTML = `
+          <div class="py-4 text-teal font-bold text-lg">
+            Thank you for subscribing!
+          </div>
+        `;
+      } else {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong");
+      }
+    } catch (err) {
+      errorEl.textContent = err.message || "Something went wrong. Please try again.";
+      errorEl?.classList.remove("hidden");
+      btn.disabled = false;
+      btn.textContent = "Subscribe";
+    }
+  });
+</script>
