@@ -31,7 +31,11 @@ export default async (req) => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({
+        email,
+        first_name: "Newsletter",
+        last_name: "Subscriber",
+      }),
     });
 
     if (!response.ok) {
