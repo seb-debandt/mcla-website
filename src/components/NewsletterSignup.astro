@@ -10,24 +10,46 @@
     <div id="newsletter-wrapper">
       <form
         id="newsletter-form"
-        class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+        class="flex flex-col gap-3 max-w-lg mx-auto"
       >
-        <label for="newsletter-email" class="sr-only">Email address</label>
-        <input
-          type="email"
-          name="email"
-          id="newsletter-email"
-          required
-          placeholder="Your email address"
-          class="flex-1 px-6 py-4 border-2 border-[#d8d4ce] rounded-full text-text-dark placeholder-text-light focus:outline-none focus:border-teal text-[15px] bg-cream transition-colors duration-200"
-        />
-        <button
-          type="submit"
-          id="newsletter-btn"
-          class="px-7 py-4 bg-teal hover:bg-teal-light text-white font-bold rounded-full transition-all duration-200 hover:-translate-y-[1px] whitespace-nowrap tracking-[0.3px]"
-        >
-          Subscribe
-        </button>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <label for="newsletter-first-name" class="sr-only">First name</label>
+          <input
+            type="text"
+            name="first_name"
+            id="newsletter-first-name"
+            required
+            placeholder="First name"
+            class="flex-1 px-6 py-4 border-2 border-[#d8d4ce] rounded-full text-text-dark placeholder-text-light focus:outline-none focus:border-teal text-[15px] bg-cream transition-colors duration-200"
+          />
+          <label for="newsletter-last-name" class="sr-only">Last name</label>
+          <input
+            type="text"
+            name="last_name"
+            id="newsletter-last-name"
+            required
+            placeholder="Last name"
+            class="flex-1 px-6 py-4 border-2 border-[#d8d4ce] rounded-full text-text-dark placeholder-text-light focus:outline-none focus:border-teal text-[15px] bg-cream transition-colors duration-200"
+          />
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            name="email"
+            id="newsletter-email"
+            required
+            placeholder="Your email address"
+            class="flex-1 px-6 py-4 border-2 border-[#d8d4ce] rounded-full text-text-dark placeholder-text-light focus:outline-none focus:border-teal text-[15px] bg-cream transition-colors duration-200"
+          />
+          <button
+            type="submit"
+            id="newsletter-btn"
+            class="px-7 py-4 bg-teal hover:bg-teal-light text-white font-bold rounded-full transition-all duration-200 hover:-translate-y-[1px] whitespace-nowrap tracking-[0.3px]"
+          >
+            Subscribe
+          </button>
+        </div>
       </form>
       <p id="newsletter-error" class="text-red-600 text-sm mt-3 hidden"></p>
     </div>
@@ -47,8 +69,11 @@
     e.preventDefault();
     errorEl?.classList.add("hidden");
 
-    const email = new FormData(form).get("email");
-    if (!email) return;
+    const data = new FormData(form);
+    const first_name = data.get("first_name");
+    const last_name = data.get("last_name");
+    const email = data.get("email");
+    if (!email || !first_name || !last_name) return;
 
     btn.disabled = true;
     btn.textContent = "Sending...";
@@ -57,7 +82,7 @@
       const res = await fetch("/.netlify/functions/newsletter-signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, first_name, last_name }),
       });
 
       if (res.ok) {

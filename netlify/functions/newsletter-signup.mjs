@@ -6,13 +6,13 @@ export default async (req) => {
     });
   }
 
-  const { email } = await req.json();
+  const { email, first_name, last_name } = await req.json();
 
-  if (!email) {
-    return new Response(JSON.stringify({ error: "Email is required" }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" },
-    });
+  if (!email || !first_name || !last_name) {
+    return new Response(
+      JSON.stringify({ error: "Email, first name, and last name are required" }),
+      { status: 400, headers: { "Content-Type": "application/json" } }
+    );
   }
 
   const apiKey = process.env.GIVEBUTTER_API_KEY;
@@ -31,11 +31,7 @@ export default async (req) => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        email,
-        first_name: "Newsletter",
-        last_name: "Subscriber",
-      }),
+      body: JSON.stringify({ email, first_name, last_name }),
     });
 
     if (!response.ok) {
