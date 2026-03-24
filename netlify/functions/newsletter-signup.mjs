@@ -23,64 +23,78 @@ export default async (req) => {
     );
   }
 
+  const headers = {
+    Authorization: `Bearer ${apiKey}`,
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  };
+
   try {
-    // Create the contact
+    // Create the contact with tags included in the payload
+    const consentDate = new Date().toISOString();
     const contactPayload = {
       first_name,
       last_name,
       emails: [{ value: email, type: "personal" }],
+      ...(marketing_consent && {
+        tags: ["marketing-consent"],
+        note: `Marketing consent given via website newsletter signup on ${consentDate}`,
+      }),
     };
 
     const response = await fetch("https://api.givebutter.com/v1/contacts", {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
+      headers,
       body: JSON.stringify(contactPayload),
     });
 
+    const contactData = await response.json().catch(() => ({}));
+
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
+      console.error("Contact creation failed:", JSON.stringify(contactData));
       return new Response(
         JSON.stringify({
-          error: errorData.message || "Failed to create contact",
+          error: contactData.message || "Failed to create contact",
         }),
         { status: response.status, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    const contact = await response.json();
-    const contactId = contact?.data?.id || contact?.id;
+    // Extract contact ID from response
+    const contactId = contactData?.data?.id || contactData?.id;
+    console.log("Contact created:", contactId, JSON.stringify(contactData));
 
-    // Tag the contact with marketing consent and newsletter signup
+    // If tags weren't accepted inline, try the sub-endpoint
     if (contactId && marketing_consent) {
-      const consentDate = new Date().toISOString();
+      // Try POST /v1/contacts/{id}/tags
+      const tagRes = await fetch(
+        `https://api.givebutter.com/v1/contacts/${contactId}/tags`,
+        {
+          method: "POST",
+          headers,
+          body: JSON.stringify({ tags: ["marketing-consent"] }),
+        }
+      ).catch(() => null);
 
-      // Add tags
-      await fetch(`https://api.givebutter.com/v1/contacts/${contactId}/tags`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ tags: ["marketing-consent"] }),
-      }).catch(() => {});
+      if (tagRes) {
+        const tagBody = await tagRes.text().catch(() => "");
+        console.log("Tag response:", tagRes.status, tagBody);
+      }
 
-      // Add a note recording consent
-      await fetch(`https://api.givebutter.com/v1/contacts/${contactId}/notes`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          body: `Marketing consent given via website newsletter signup on ${consentDate}`,
-        }),
-      }).catch(() => {});
+      // Try PUT /v1/contacts/{id} with tags (update approach)
+      const updateRes = await fetch(
+        `https://api.givebutter.com/v1/contacts/${contactId}`,
+        {
+          method: "PUT",
+          headers,
+          body: JSON.stringify({ tags: ["marketing-consent"] }),
+        }
+      ).catch(() => null);
+
+      if (updateRes) {
+        const updateBody = await updateRes.text().catch(() => "");
+        console.log("Update response:", updateRes.status, updateBody);
+      }
     }
 
     return new Response(JSON.stringify({ success: true }), {
@@ -88,6 +102,7 @@ export default async (req) => {
       headers: { "Content-Type": "application/json" },
     });
   } catch (err) {
+    console.error("Newsletter signup error:", err);
     return new Response(
       JSON.stringify({ error: "Unable to process request" }),
       { status: 500, headers: { "Content-Type": "application/json" } }
