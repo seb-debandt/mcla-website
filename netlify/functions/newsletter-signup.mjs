@@ -6,7 +6,7 @@ export default async (req) => {
     });
   }
 
-  const { email, first_name, last_name } = await req.json();
+  const { email, first_name, last_name, marketing_consent } = await req.json();
 
   if (!email || !first_name || !last_name) {
     return new Response(
@@ -24,6 +24,13 @@ export default async (req) => {
   }
 
   try {
+    // Create the contact
+    const contactPayload = {
+      first_name,
+      last_name,
+      emails: [{ value: email, type: "personal" }],
+    };
+
     const response = await fetch("https://api.givebutter.com/v1/contacts", {
       method: "POST",
       headers: {
@@ -31,11 +38,7 @@ export default async (req) => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        emails: [{ value: email, type: "personal" }],
-      }),
+      body: JSON.stringify(contactPayload),
     });
 
     if (!response.ok) {
@@ -46,6 +49,38 @@ export default async (req) => {
         }),
         { status: response.status, headers: { "Content-Type": "application/json" } }
       );
+    }
+
+    const contact = await response.json();
+    const contactId = contact?.data?.id || contact?.id;
+
+    // Tag the contact with marketing consent and newsletter signup
+    if (contactId && marketing_consent) {
+      const consentDate = new Date().toISOString();
+
+      // Add tags
+      await fetch(`https://api.givebutter.com/v1/contacts/${contactId}/tags`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ tags: ["newsletter", "marketing-consent"] }),
+      }).catch(() => {});
+
+      // Add a note recording consent
+      await fetch(`https://api.givebutter.com/v1/contacts/${contactId}/notes`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          body: `Marketing consent given via website newsletter signup on ${consentDate}`,
+        }),
+      }).catch(() => {});
     }
 
     return new Response(JSON.stringify({ success: true }), {
