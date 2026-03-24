@@ -66,7 +66,7 @@ export default async (req) => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({ tags: ["newsletter", "marketing-consent"] }),
+        body: JSON.stringify({ tags: ["marketing-consent"] }),
       }).catch(() => {});
 
       // Add a note recording consent
