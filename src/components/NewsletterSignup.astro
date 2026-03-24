@@ -50,12 +50,21 @@
             Subscribe
           </button>
         </div>
+        <div class="flex items-start gap-3 text-left mt-1 max-w-md mx-auto">
+          <input
+            type="checkbox"
+            name="marketing_consent"
+            id="newsletter-consent"
+            required
+            class="mt-1 w-4 h-4 accent-teal rounded border-[#d8d4ce] cursor-pointer shrink-0"
+          />
+          <label for="newsletter-consent" class="text-text-light text-xs leading-relaxed cursor-pointer">
+            I agree to receive email communications from MCLA, including newsletters, research updates, and event information. You can unsubscribe at any time. See our <a href="/privacy-policy" class="underline hover:text-teal transition-colors duration-200">Privacy Policy</a>.
+          </label>
+        </div>
       </form>
       <p id="newsletter-error" class="text-red-600 text-sm mt-3 hidden"></p>
     </div>
-    <p class="text-text-light text-xs mt-4">
-      By subscribing you agree to our <a href="/privacy-policy" class="underline hover:text-teal transition-colors duration-200">Privacy Policy</a>.
-    </p>
   </div>
 </section>
 
@@ -73,7 +82,14 @@
     const first_name = data.get("first_name");
     const last_name = data.get("last_name");
     const email = data.get("email");
+    const consent = document.getElementById("newsletter-consent");
     if (!email || !first_name || !last_name) return;
+
+    if (!consent?.checked) {
+      errorEl.textContent = "Please confirm you agree to receive email communications.";
+      errorEl?.classList.remove("hidden");
+      return;
+    }
 
     btn.disabled = true;
     btn.textContent = "Sending...";
@@ -82,7 +98,7 @@
       const res = await fetch("/.netlify/functions/newsletter-signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, first_name, last_name }),
+        body: JSON.stringify({ email, first_name, last_name, marketing_consent: true }),
       });
 
       if (res.ok) {
