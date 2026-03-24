@@ -123,34 +123,67 @@ const currentYear = new Date().getFullYear();
 
     <!-- Newsletter in Footer -->
     <div class="mt-12 pt-8 border-t border-white/10">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="text-center">
           <h3 class="text-white font-bold text-sm mb-1">Stay Informed</h3>
           <p class="text-white/50 text-sm">Get the latest MCL research updates and community news.</p>
         </div>
-        <form
-          name="footer-newsletter"
-          method="POST"
-          data-netlify="true"
-          class="flex gap-2 w-full md:w-auto"
-        >
-          <input type="hidden" name="form-name" value="footer-newsletter" />
-          <label for="footer-email" class="sr-only">Email address</label>
-          <input
-            type="email"
-            name="email"
-            id="footer-email"
-            required
-            placeholder="Your email address"
-            class="px-6 py-3 bg-white/[0.06] border border-white/20 rounded-full text-white placeholder-white/35 text-sm focus:outline-none focus:border-amber-light transition-colors duration-200 w-full md:w-72"
-          />
-          <button
-            type="submit"
-            class="px-7 py-3 bg-amber hover:bg-amber-light text-white text-sm font-bold rounded-full transition-colors duration-200 whitespace-nowrap"
+        <div id="footer-newsletter-wrapper" class="w-full max-w-3xl">
+          <form
+            id="footer-newsletter-form"
+            class="flex flex-col gap-3"
           >
-            Subscribe
-          </button>
-        </form>
+            <div class="flex flex-col lg:flex-row gap-3">
+              <label for="footer-first-name" class="sr-only">First name</label>
+              <input
+                type="text"
+                name="first_name"
+                id="footer-first-name"
+                required
+                placeholder="First name"
+                class="flex-1 px-5 py-3 bg-white/[0.06] border border-white/20 rounded-full text-white placeholder-white/35 text-sm focus:outline-none focus:border-amber-light transition-colors duration-200"
+              />
+              <label for="footer-last-name" class="sr-only">Last name</label>
+              <input
+                type="text"
+                name="last_name"
+                id="footer-last-name"
+                required
+                placeholder="Last name"
+                class="flex-1 px-5 py-3 bg-white/[0.06] border border-white/20 rounded-full text-white placeholder-white/35 text-sm focus:outline-none focus:border-amber-light transition-colors duration-200"
+              />
+              <label for="footer-email" class="sr-only">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="footer-email"
+                required
+                placeholder="Your email address"
+                class="flex-[1.5] px-5 py-3 bg-white/[0.06] border border-white/20 rounded-full text-white placeholder-white/35 text-sm focus:outline-none focus:border-amber-light transition-colors duration-200"
+              />
+              <button
+                type="submit"
+                id="footer-newsletter-btn"
+                class="px-7 py-3 bg-amber hover:bg-amber-light text-white text-sm font-bold rounded-full transition-colors duration-200 whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+            <div class="flex items-start gap-3 text-left max-w-md mx-auto">
+              <input
+                type="checkbox"
+                name="marketing_consent"
+                id="footer-newsletter-consent"
+                required
+                class="mt-0.5 w-4 h-4 accent-amber rounded border-white/20 cursor-pointer shrink-0"
+              />
+              <label for="footer-newsletter-consent" class="text-white/40 text-xs leading-relaxed cursor-pointer">
+                I agree to receive email communications from MCLA, including newsletters, research updates, and event information. You can unsubscribe at any time. See our <a href="/privacy-policy" class="underline hover:text-amber-light transition-colors duration-200">Privacy Policy</a>.
+              </label>
+            </div>
+          </form>
+          <p id="footer-newsletter-error" class="text-red-400 text-sm mt-3 hidden text-center"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -173,3 +206,56 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
+
+<script>
+  const footerForm = document.getElementById("footer-newsletter-form");
+  const footerBtn = document.getElementById("footer-newsletter-btn");
+  const footerWrapper = document.getElementById("footer-newsletter-wrapper");
+  const footerError = document.getElementById("footer-newsletter-error");
+
+  footerForm?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    footerError?.classList.add("hidden");
+
+    const data = new FormData(footerForm);
+    const first_name = data.get("first_name");
+    const last_name = data.get("last_name");
+    const email = data.get("email");
+    const consent = document.getElementById("footer-newsletter-consent");
+
+    if (!email || !first_name || !last_name) return;
+
+    if (!consent?.checked) {
+      footerError.textContent = "Please confirm you agree to receive email communications.";
+      footerError?.classList.remove("hidden");
+      return;
+    }
+
+    footerBtn.disabled = true;
+    footerBtn.textContent = "Sending...";
+
+    try {
+      const res = await fetch("/.netlify/functions/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, first_name, last_name, marketing_consent: true }),
+      });
+
+      if (res.ok) {
+        footerWrapper.innerHTML = `
+          <div class="py-4 text-amber-light font-bold text-lg text-center">
+            Thank you for subscribing!
+          </div>
+        `;
+      } else {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong");
+      }
+    } catch (err) {
+      footerError.textContent = err.message || "Something went wrong. Please try again.";
+      footerError?.classList.remove("hidden");
+      footerBtn.disabled = false;
+      footerBtn.textContent = "Subscribe";
+    }
+  });
+</script>
