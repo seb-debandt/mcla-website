@@ -1,6 +1,6 @@
 ---
 name: Larry Fagan
-title: Co-founder and Board member
+title: Co-founder and Board Member
 roleType: board
 bio: >-
   Lawrence Fagan, MD, PhD was diagnosed with MCL in 2012. He is the moderator of
