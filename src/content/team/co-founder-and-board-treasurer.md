@@ -12,7 +12,7 @@ bio: >-
 
   undergraduate degree in accounting and an inactive CPA license.
 
-  Diagnosed with Mantle Cell Lymphoma in 2024, Carol is currently in remission. Her experience
+  Diagnosed with mantle cell lymphoma in 2024, Carol is currently in remission. Her experience
 
   navigating diagnosis and treatment firsthand deepened her appreciation for organizations like
 
