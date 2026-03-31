@@ -1,6 +1,6 @@
 ---
 name: Kristine Tuchek
-title: Co-founder and Board member
+title: Co-founder and Board Member
 roleType: board
 bio: >-
   Kristine Tuchek, PA-C, is co-founder of the MCLA. A physician assistant for
