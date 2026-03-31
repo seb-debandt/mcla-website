@@ -1,6 +1,6 @@
 ---
 name: Linda Trummer
-title: Co-founder and Board member
+title: Co-founder and Board Member
 roleType: board
 bio: "Linda Trummer is a survivor, advocate, and longtime community leader.
   After being diagnosed with mantle cell lymphoma, blastoid variant, and
