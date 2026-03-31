@@ -7,5 +7,5 @@ bio: Olivier de Bandt is co-founder of the MCLA. He holds a PhD in Economics and
   30 years. With several cancer cases in his family, he is convinced that more
   investment in medical research is crucial to eventually eradicate MCL.
 photo: /uploads/olivier-photo.jpeg
-order: 3
+order: 4
 ---
