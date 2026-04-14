@@ -2,7 +2,7 @@
 title: Find a Specialist
 draft: false
 navMenu: Understanding MCL
-navLabel: Find an Specialist
+navLabel: Find a Specialist
 navOrder: 3
 subtitle: Why specialist experience matters for MCL, and how to find the right care team.
 description: Find a hematologist-oncologist with experience treating mantle cell
