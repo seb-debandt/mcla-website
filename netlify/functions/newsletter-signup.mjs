@@ -30,7 +30,7 @@ export default async (req) => {
       last_name,
       emails: [{ value: email, type: "personal" }],
       ...(marketing_consent && {
-        tags: ["marketing-consent"],
+        tags: ["marketing-consent", "mcla-newsletter"],
         note: `Marketing consent given via website newsletter signup on ${consentDate}`,
       }),
     };
