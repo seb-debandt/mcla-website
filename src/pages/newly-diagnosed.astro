@@ -301,8 +301,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="nd-org-grid">
         <a href="https://bloodcancerunited.org" target="_blank" rel="noopener" class="nd-org-card">
-          <div class="nd-org-logo-box">
-            <img src="https://bloodcancerunited.org/themes/custom/blood_cancer_united/logo.svg" alt="Blood Cancer United" />
+          <div class="nd-org-logo-box nd-org-bcu">
+            <div class="nd-org-bcu-mark">Blood Cancer</div>
+            <div class="nd-org-bcu-accent">United</div>
           </div>
           <div class="nd-org-desc">Patient support, education, advocacy and research funding across all blood cancers.</div>
           <span class="nd-org-link">Visit site →</span>
@@ -504,6 +505,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .nd-org-logo-box { height: 72px; width: 100%; display: flex; align-items: center; justify-content: center; padding: 4px; }
   .nd-org-logo-box img { max-height: 64px; max-width: 100%; object-fit: contain; }
   .nd-org-lrf { background: #6a4a8a; border-radius: 8px; padding: 10px; }
+  .nd-org-bcu { flex-direction: column; gap: 2px; }
+  .nd-org-bcu-mark { font-weight: 900; font-size: 17px; color: var(--nd-teal-deep); letter-spacing: -0.5px; line-height: 1.1; }
+  .nd-org-bcu-accent { font-weight: 900; font-size: 17px; color: #c8102e; letter-spacing: -0.5px; line-height: 1.1; }
   .nd-org-bmt { font-weight: 900; font-size: 18px; color: var(--nd-teal-deep); letter-spacing: -0.5px; line-height: 1.1; text-align: center; flex-direction: column; display: flex; }
   .nd-org-bmt-acc { color: var(--nd-amber); font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
   .nd-org-desc { font-size: 13px; color: var(--nd-text-mid); line-height: 1.55; margin-top: auto; }
