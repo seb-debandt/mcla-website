@@ -1,9 +1,9 @@
 ---
 title: Newly Diagnosed
-draft: true
+draft: false
 navMenu: Understanding MCL
-navLabel: Newly Diagnosed
-navOrder: 2
+navLabel: Newly diagnosed
+navOrder: 0
 subtitle: A diagnosis of MCL can feel overwhelming. You are not alone, and there
   are clear steps you can take.
 description: Just diagnosed with mantle cell lymphoma? Here's what you need to
