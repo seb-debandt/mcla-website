@@ -62,7 +62,7 @@ const dropdownItems: NavItem[] = menuOrder
   .map(name => ({ label: name, children: groups[name].map(({ label, href }) => ({ label, href })) }));
 
 // News is hardcoded (from blog collection, not pages)
-const newsItem: NavItem = { label: 'News', href: '/news' };
+const newsItem: NavItem = { label: 'News', href: '/news/' };
 
 // Get Involved dropdown
 const getInvolvedItem: NavItem | null = groups['Get Involved']?.length
@@ -76,6 +76,7 @@ const topLevelItems: NavItem[] = (groups['Top Level'] || [])
 const navItems: NavItem[] = [
   ...dropdownItems,
   ...(getInvolvedItem ? [getInvolvedItem] : []),
+  newsItem,
   ...topLevelItems,
 ];
 ---
