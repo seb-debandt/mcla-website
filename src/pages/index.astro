@@ -4,7 +4,6 @@ import Hero from '../components/Hero.astro';
 import PillarCards from '../components/PillarCards.astro';
 import StatsSection from '../components/StatsSection.astro';
 import NewsCards from '../components/NewsCards.astro';
-import DonateForm from '../components/DonateForm.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getEntry } from 'astro:content';
 
@@ -43,5 +42,6 @@ if (page.data.draft) return Astro.redirect('/404');
     stats={page.data.stats}
     source={page.data.statsSource}
   />
+  <NewsCards />
   <NewsletterSignup />
 </BaseLayout>
