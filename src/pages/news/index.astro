@@ -45,8 +45,17 @@ const categories = ['All', 'Research', 'Patient Stories', 'News', 'Events'];
             class="post-card group block bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 no-underline"
             data-category={post.data.category}
           >
-            <div class="aspect-[16/9] bg-gradient-to-br from-teal/20 to-warm-white flex items-center justify-center">
-              <span class="text-teal/40 text-sm font-medium">Featured Image</span>
+            <div class="aspect-[16/9] bg-gradient-to-br from-teal/20 to-warm-white flex items-center justify-center overflow-hidden">
+              {post.data.featuredImage ? (
+                <img
+                  src={post.data.featuredImage}
+                  alt=""
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                <span class="text-teal/40 text-sm font-medium">Featured Image</span>
+              )}
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">

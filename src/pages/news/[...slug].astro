@@ -43,6 +43,16 @@ const { Content } = await render(post);
     <!-- Article Content -->
     <section class="py-12 md:py-16 bg-warm-white">
       <div class="max-w-3xl mx-auto px-6 lg:px-12">
+        {post.data.featuredImage && (
+          <figure class="mb-10 overflow-hidden rounded-2xl border border-border bg-white">
+            <img
+              src={post.data.featuredImage}
+              alt=""
+              class="w-full aspect-[16/9] object-cover"
+            />
+          </figure>
+        )}
+
         <div class="prose max-w-none">
           <Content />
         </div>
