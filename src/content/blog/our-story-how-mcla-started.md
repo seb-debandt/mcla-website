@@ -50,9 +50,7 @@ Mantle Cell Lymphoma Alliance exists to change that.
 
 We are building a focused, patient-centered organization dedicated to:
 
-* **Providing clear, expert-vetted information**
-
-   patients can trust
+* **Providing clear, expert-vetted information** patients can trust
 * **Connecting patients, caregivers, clinicians, and researchers**
 * **Advancing research through targeted funding and collaboration**
 
