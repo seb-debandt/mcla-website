@@ -22,7 +22,7 @@ At the end of the discussion, someone asked:
 “What can we, as patients, do to help?”
 
 Dr. Phillips’ answer was clear:
-"Mantle cell lymphoma is a rare disease—and it lacks a dedicated advocacy organization. One could make a real difference."
+Mantle cell lymphoma is a rare disease—and it lacks a dedicated advocacy organization. One could make a real difference.
 
 That moment stayed with us.
 
