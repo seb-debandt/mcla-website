@@ -1,11 +1,19 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+const cmsDate = z.union([z.string(), z.date()]).transform((date) => {
+  if (date instanceof Date) {
+    return date.toISOString().slice(0, 10);
+  }
+
+  return date;
+});
+
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
-    date: z.string(),
+    date: cmsDate,
     author: z.string(),
     category: z.enum(['Research', 'Patient Stories', 'News', 'Events']),
     excerpt: z.string(),
