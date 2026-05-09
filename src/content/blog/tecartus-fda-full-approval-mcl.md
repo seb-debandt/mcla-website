@@ -31,7 +31,7 @@ The approval also reflects the growing role of cellular therapies in blood cance
 
 ### Sources
 
-* Oncology News Central — *FDA Fully Approves Brexucabtagene Autoleucel for Mantle Cell Lymphoma*
-* AJMC — *FDA Approves Brexucabtagene Autoleucel for Refractory Mantle Cell Lymphoma*
-* Cancer Network — *FDA Approves Brexucabtagene Autoleucel in Adult R/R MCL*
-* Targeted Oncology — *FDA Grants Full Approval to Brexu-cel in R/R Mantle Cell Lymphoma*
+* [Oncology News Central — *FDA Fully Approves Brexucabtagene Autoleucel for Mantle Cell Lymphoma*](https://www.oncologynewscentral.com/drugs/info/fda-fully-approves-brexucabtagene-autoleucel-for-mantle-cell-lymphoma)
+* [AJMC — *FDA Approves Brexucabtagene Autoleucel for Refractory Mantle Cell Lymphoma*](https://www.ajmc.com/view/fda-approves-brexucabtagne-autoleucel-for-refractory-mantle-cell-lymphoma)
+* [Cancer Network — *FDA Approves Brexucabtagene Autoleucel in Adult R/R MCL*](https://www.cancernetwork.com/view/fda-approves-brexucabtagene-autoleucel-in-adult-r-r-mcl)
+* [Targeted Oncology — *FDA Grants Full Approval to Brexu-cel in R/R Mantle Cell Lymphoma*](https://www.targetedonc.com/view/fda-grants-full-approval-to-brexu-cel-in-r-r-mantle-cell-lymphoma)

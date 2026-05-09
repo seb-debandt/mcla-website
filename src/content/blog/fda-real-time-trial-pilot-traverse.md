@@ -29,9 +29,8 @@ For people living with mantle cell lymphoma and their families, the inclusion of
 
 ### Sources
 
-* FDA News Release
-* ABC News
-* Reuters / Yahoo News
-* TechTarget
-* Akin Gump
-* Applied Clinical Trials Online
+* [FDA News Release — *FDA Announces Major Steps to Implement Real-Time Clinical Trials*](https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials)
+* [ABC News — *FDA set to pilot test real-time tracking of clinical trials*](https://abcnews.com/Health/fda-set-pilot-test-real-time-tracking-clinical/story?id=132449119)
+* [TechTarget — *FDA moves toward real-time review of clinical trial data*](https://www.techtarget.com/pharmalifesciences/news/366642589/FDA-moves-toward-real-time-review-of-clinical-trial-data)
+* [Akin Gump (via JD Supra) — *FDA Makes Moves to Modernize Drug Development, Clinical Trial Paradigm*](https://www.jdsupra.com/legalnews/fda-makes-moves-to-modernize-drug-3389649/)
+* [Applied Clinical Trials Online — *FDA Launches Proof-of-Concept Real-Time Clinical Trials*](https://www.appliedclinicaltrialsonline.com/view/fda-real-time-clinical-trials)
