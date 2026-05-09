@@ -7,6 +7,7 @@ excerpt: New long-term data from the ZUMA-2 trial supported the FDA's full
   approval of Tecartus in April 2026, with a 91% response rate in adults with
   relapsed or refractory mantle cell lymphoma after prior therapies including
   BTK inhibitors.
+featuredImage: /uploads/news/tecartus-fda-full-approval-mcl.png
 ---
 The US Food and Drug Administration (FDA) granted full approval to Tecartus, a CAR T-cell therapy, for adults with relapsed or refractory mantle cell lymphoma (MCL) on April 2, 2026. The approval covers patients whose disease has returned or stopped responding to prior treatments, including BTK inhibitors.
 
