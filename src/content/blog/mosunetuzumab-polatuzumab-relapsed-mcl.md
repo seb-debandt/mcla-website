@@ -7,6 +7,7 @@ excerpt: A new Phase 2 study published in Blood in April 2026 reports an 88%
   response rate for a fixed-duration combination of mosunetuzumab and
   polatuzumab vedotin in patients with mantle cell lymphoma whose disease has
   returned after a BTK inhibitor.
+featuredImage: /uploads/news/mosunetuzumab-polatuzumab-relapsed-mcl.png
 ---
 A Phase 2 clinical trial published online in *Blood* on 21 April 2026 reports encouraging results for a combination of two targeted immunotherapies — mosunetuzumab and polatuzumab vedotin — in people with relapsed or refractory mantle cell lymphoma (MCL) who have already been through several lines of treatment, including a BTK inhibitor. Across 42 patients, 88% responded to the regimen and 79% achieved a complete response, meaning no detectable cancer at the end of treatment.
 
