@@ -1,7 +1,7 @@
 ---
 title: FDA Grants Full Approval to Tecartus for Relapsed Mantle Cell Lymphoma
 date: 2026-05-08
-author: MCLA Science Corner
+author: David Jaquette, co-founder and Board Member
 category: News
 excerpt: New long-term data from the ZUMA-2 trial supported the FDA's full
   approval of Tecartus in April 2026, with a 91% response rate in adults with

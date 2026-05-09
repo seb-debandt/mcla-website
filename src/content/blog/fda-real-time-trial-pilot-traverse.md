@@ -1,7 +1,7 @@
 ---
 title: FDA Launches Real-Time Clinical Trial Pilot — and Mantle Cell Lymphoma Is at the Center
 date: 2026-05-07
-author: MCLA Science Corner
+author: David Jaquette, co-founder and Board Member
 category: News
 excerpt: The FDA has selected a mantle cell lymphoma study as one of the first
   trials in a new pilot program that lets regulators see clinical trial data in

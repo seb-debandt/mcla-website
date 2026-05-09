@@ -1,7 +1,7 @@
 ---
 title: Targeted Immunotherapy Combo Shows Strong Results in Relapsed Mantle Cell Lymphoma
 date: 2026-05-09
-author: MCLA Science Corner
+author: David Jaquette, co-founder and Board Member
 category: Research
 excerpt: A new Phase 2 study published in Blood in April 2026 reports an 88%
   response rate for a fixed-duration combination of mosunetuzumab and
