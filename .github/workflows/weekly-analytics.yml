@@ -1,0 +1,34 @@
+name: Weekly Analytics Report
+
+# Runs every Monday at 11:00 UTC (= 7am ET in EDT / 6am ET in EST) and emails
+# a weekly MCLA website analytics summary. Also exposes a manual "Run workflow"
+# button in the Actions tab for ad-hoc testing.
+#
+# See scripts/weekly-analytics.py for the report logic.
+# See ANALYTICS.md for the broader setup, secrets, and troubleshooting notes.
+
+on:
+  schedule:
+    - cron: "0 11 * * 1"
+  workflow_dispatch:
+
+jobs:
+  send-report:
+    name: Build and send weekly report
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run weekly analytics
+        env:
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
+          GIVEBUTTER_API_KEY: ${{ secrets.GIVEBUTTER_API_KEY }}
+          AGENTMAIL_API_KEY: ${{ secrets.AGENTMAIL_API_KEY }}
+        run: python scripts/weekly-analytics.py
