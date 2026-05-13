@@ -11,9 +11,9 @@ featuredImage: /uploads/news/fda-real-time-trial-pilot-traverse.png
 ---
 The U.S. Food and Drug Administration (FDA) has launched a new pilot program that could change how clinical trials are reviewed — and a mantle cell lymphoma (MCL) study has been chosen as one of the very first to take part. Instead of waiting months or years to review results at the end of each trial phase, the FDA will now be able to see key safety and effectiveness information as it is happening, using secure, real‑time data systems. One of the two initial trials selected is the Phase 2 TRAVERSE study in patients with treatment‑naïve mantle cell lymphoma.
 
-FDA leaders say this shift is long overdue. "For 60 years, we've been conducting clinical trials in the same way, where key data signals can take years to reach the FDA," said FDA Commissioner Dr. Marty Makary when announcing the pilot. He explained that long gaps between trial phases can delay decisions unnecessarily and slow patient access to new therapies. With real‑time monitoring, FDA reviewers can see important events — such as side effects, hospitalizations, or tumor reduction — much sooner than before.
+FDA leaders say this shift is long overdue. "For 60 years, we've been conducting clinical trials in the same way, where key data signals can take years to reach the FDA," said the FDA when announcing the pilot. He explained that long gaps between trial phases can delay decisions unnecessarily and slow patient access to new therapies. With real‑time monitoring, FDA reviewers can see important events — such as side effects, hospitalizations, or tumor reduction — much sooner than before.
 
-For the mantle cell lymphoma community, the FDA's decision to include an MCL trial at the start of this program is especially meaningful. Real‑time monitoring could help identify promising treatments earlier, while also detecting safety concerns sooner so trials can be adjusted quickly if needed. FDA officials stressed that this approach does not lower safety standards — it reduces delays caused by paperwork. Dr. Makary noted that nearly half of today's clinical trial timelines are consumed by administrative steps rather than active treatment and data review.
+For the mantle cell lymphoma community, the FDA's decision to include an MCL trial at the start of this program is especially meaningful. Real‑time monitoring could help identify promising treatments earlier, while also detecting safety concerns sooner so trials can be adjusted quickly if needed. FDA officials stressed that this approach does not lower safety standards — it reduces delays caused by paperwork. In particular, the FDA noted that nearly half of today's clinical trial timelines are consumed by administrative steps rather than active treatment and data review.
 
 ### What Is the TRAVERSE Trial?
 
@@ -23,7 +23,7 @@ While the FDA has not stated exactly why TRAVERSE was chosen, officials have emp
 
 ### Why This New Approach Matters for MCL Patients
 
-If successful, this pilot could shorten the time it takes for effective new treatments to move through clinical trials and reach patients. Instead of waiting for end‑of‑phase reports, regulators may be able to act earlier to approve new therapies. Dr. Makary described this as a step toward more "continuous" trials, where learning happens in real time rather than in long pauses.
+If successful, this pilot could shorten the time it takes for effective new treatments to move through clinical trials and reach patients. Instead of waiting for end‑of‑phase reports, regulators may be able to act earlier to approve new therapies. The FDA described this as a step toward more "continuous" trials, where learning happens in real time rather than in long pauses.
 
 For people living with mantle cell lymphoma and their families, the inclusion of an MCL study in this landmark pilot sends a strong signal. It reflects the urgency of the disease and places mantle cell lymphoma at the forefront of efforts to modernize how new cancer treatments are studied, reviewed, and ultimately made available to patients.
 
