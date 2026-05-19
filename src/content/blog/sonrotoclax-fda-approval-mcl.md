@@ -9,6 +9,7 @@ excerpt: Newly approved therapy expands treatment choices and signals continued
   patients whose disease has returned or stopped responding after at least two
   prior treatments.
 featuredImage: /uploads/news/sonrotoclax-fda-approval-mcl.png
+cardTitle: Sonrotoclax
 ---
 The US Food and Drug Administration (FDA) has approved a new drug, sonrotoclax (brand name Beqalzi), for people with mantle cell lymphoma (MCL) whose disease has returned or stopped responding after at least two prior treatments.
 
