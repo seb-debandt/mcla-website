@@ -7,7 +7,14 @@ interface Props {
 
 const { title, size = 'full' } = Astro.props;
 
-const parts = title.split(' + ');
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// Preserve whitespace around the "+" so the browser can wrap there.
+const titleHtml = escapeHtml(title).replace(
+  / \+ /g,
+  ' <span class="text-amber">+</span> ',
+);
 ---
 
 <div
@@ -20,17 +27,11 @@ const parts = title.split(' + ');
 >
   <h2
     class:list={[
-      'font-black text-text-dark leading-[1.05] [text-wrap:balance] [word-break:normal] [overflow-wrap:break-word]',
+      'font-black text-text-dark leading-[1.05] [text-wrap:balance] [overflow-wrap:break-word]',
       size === 'full'
         ? 'text-[clamp(22px,8cqi,60px)] tracking-[-1.2px]'
         : 'text-[clamp(14px,7.5cqi,28px)] tracking-[-0.5px]',
     ]}
-  >
-    {parts.map((part, i) => (
-      <>
-        {i > 0 && <span class="text-amber px-[0.06em]">+</span>}
-        {part}
-      </>
-    ))}
-  </h2>
+    set:html={titleHtml}
+  />
 </div>
