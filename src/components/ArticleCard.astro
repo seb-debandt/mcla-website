@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  /** 'full' for the standalone article-page header; 'compact' for a listing thumbnail (fills its parent). */
+  size?: 'full' | 'compact';
+}
+
+const { title, size = 'full' } = Astro.props;
+
+const parts = title.split(' + ');
+---
+
+<div
+  class:list={[
+    'flex items-center bg-warm-white overflow-hidden',
+    size === 'full'
+      ? 'aspect-[16/9] rounded-2xl border border-border px-[8%]'
+      : 'w-full h-full px-[7%]',
+  ]}
+>
+  <h2
+    class:list={[
+      'font-black text-text-dark leading-[1.05]',
+      size === 'full'
+        ? 'text-[clamp(40px,6vw,76px)] tracking-[-1.5px]'
+        : 'text-[clamp(18px,2.4vw,30px)] tracking-[-0.7px]',
+    ]}
+  >
+    {parts.map((part, i) => (
+      <>
+        {i > 0 && <span class="text-amber px-[0.06em]">+</span>}
+        {part}
+      </>
+    ))}
+  </h2>
+</div>

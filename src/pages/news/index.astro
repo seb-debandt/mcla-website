@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
@@ -46,7 +47,9 @@ const categories = ['All', 'Research', 'Patient Stories', 'News', 'Events'];
             data-category={post.data.category}
           >
             <div class="aspect-[16/9] bg-gradient-to-br from-teal/20 to-warm-white flex items-center justify-center overflow-hidden">
-              {post.data.featuredImage ? (
+              {post.data.cardTitle ? (
+                <ArticleCard title={post.data.cardTitle} size="compact" />
+              ) : post.data.featuredImage ? (
                 <img
                   src={post.data.featuredImage}
                   alt=""

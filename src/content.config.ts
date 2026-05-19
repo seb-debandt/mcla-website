@@ -18,6 +18,7 @@ const blog = defineCollection({
     category: z.enum(['Research', 'Patient Stories', 'News', 'Events']),
     excerpt: z.string(),
     featuredImage: z.string().optional(),
+    cardTitle: z.string().optional(),
   }),
 });
 

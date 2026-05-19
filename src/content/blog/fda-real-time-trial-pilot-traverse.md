@@ -8,6 +8,7 @@ excerpt: The FDA has selected a mantle cell lymphoma study as one of the first
   real time — a move that could speed access to promising treatments for
   patients.
 featuredImage: /uploads/news/fda-real-time-trial-pilot-traverse.png
+cardTitle: Acalabrutinib + Venetoclax + Rituximab
 ---
 The U.S. Food and Drug Administration (FDA) has launched a new pilot program that could change how clinical trials are reviewed — and a mantle cell lymphoma (MCL) study has been chosen as one of the very first to take part. Instead of waiting months or years to review results at the end of each trial phase, the FDA will now be able to see key safety and effectiveness information as it is happening, using secure, real‑time data systems. One of the two initial trials selected is the Phase 2 TRAVERSE study in patients with treatment‑naïve mantle cell lymphoma.
 
