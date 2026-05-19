@@ -7,6 +7,7 @@ excerpt: When mantle cell lymphoma changes your world overnight, you go
   searching for answers. Too often, you don't find them. This is the story of
   why we built MCLA—and what comes next.
 featuredImage: /uploads/board-montage-our-story.jpg
+articleImage: true
 ---
 ### Our Story
 

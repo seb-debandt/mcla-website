@@ -17,8 +17,9 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Category", name: "category", widget: "select", options: ["Research", "Patient Stories", "News", "Events"] }
       - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false, hint: "Used as a fallback when Card Title is empty (and for social-share previews)." }
-      - { label: "Card Title", name: "cardTitle", widget: "string", required: false, hint: "Short therapy / regimen name shown in the big card at the top of the article and on the news listing. Use ' + ' between drug names — the + is highlighted in amber automatically. Leave blank to fall back to the Featured Image." }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false, hint: "Shown as the tile on the /news listing when Card Title is empty. Not shown on the article page itself unless 'Show image on article' is also ticked." }
+      - { label: "Card Title", name: "cardTitle", widget: "string", required: false, hint: "Short therapy / regimen name shown as a text tile on the /news listing page. Use ' + ' between drug names — the + is highlighted in amber automatically. Leave blank to fall back to the Featured Image tile." }
+      - { label: "Show image on article", name: "articleImage", widget: "boolean", required: false, default: false, hint: "Tick to also render the Featured Image at the top of the article page (above the prose). Off by default — designed trial cards stay on the listing only. Tick this for posts where the image is a real photo that belongs inside the story (e.g. Our Story)." }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "team"
