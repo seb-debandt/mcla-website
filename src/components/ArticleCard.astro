@@ -12,18 +12,18 @@ const parts = title.split(' + ');
 
 <div
   class:list={[
-    'flex items-center bg-warm-white overflow-hidden',
+    'flex items-center bg-warm-white overflow-hidden [container-type:inline-size]',
     size === 'full'
-      ? 'aspect-[16/9] rounded-2xl border border-border px-[8%]'
-      : 'w-full h-full px-[7%]',
+      ? 'aspect-[16/9] rounded-2xl border border-border px-[7%]'
+      : 'w-full h-full px-[6%]',
   ]}
 >
   <h2
     class:list={[
-      'font-black text-text-dark leading-[1.05]',
+      'font-black text-text-dark leading-[1.05] [text-wrap:balance] [word-break:normal] [overflow-wrap:break-word]',
       size === 'full'
-        ? 'text-[clamp(40px,6vw,76px)] tracking-[-1.5px]'
-        : 'text-[clamp(18px,2.4vw,30px)] tracking-[-0.7px]',
+        ? 'text-[clamp(22px,8cqi,60px)] tracking-[-1.2px]'
+        : 'text-[clamp(14px,7.5cqi,28px)] tracking-[-0.5px]',
     ]}
   >
     {parts.map((part, i) => (
