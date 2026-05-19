@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import ArticleCard from './ArticleCard.astro';
 
 const posts = (await getCollection('blog'))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
@@ -37,7 +38,9 @@ const posts = (await getCollection('blog'))
             class="group flex flex-col min-h-full bg-white rounded-lg overflow-hidden border border-border hover:shadow-xl transition-all duration-300 no-underline"
           >
             <div class="aspect-[16/9] bg-gradient-to-br from-teal/15 to-amber/10 flex items-center justify-center overflow-hidden">
-              {post.data.featuredImage ? (
+              {post.data.cardTitle ? (
+                <ArticleCard title={post.data.cardTitle} size="compact" />
+              ) : post.data.featuredImage ? (
                 <img
                   src={post.data.featuredImage}
                   alt=""
