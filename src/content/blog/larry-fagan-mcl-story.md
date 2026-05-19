@@ -8,7 +8,7 @@ excerpt: Larry Fagan, an MCLA Board Member, was diagnosed with mantle cell
   shares his treatment journey at Stanford, the unusual way he learned about
   his diagnosis, and how an online community of MCL patients eventually led him
   to help start the MCLA.
-featuredImage: /uploads/news/larry-fagan-family-2012.jpg
+featuredImage: /uploads/featured-images/larry-fagan-family-2012.jpg
 articleImage: true
 ---
 
