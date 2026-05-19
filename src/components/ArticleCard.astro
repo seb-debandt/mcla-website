@@ -13,21 +13,21 @@ const escapeHtml = (s: string) =>
 // Preserve whitespace around the "+" so the browser can wrap there.
 const titleHtml = escapeHtml(title).replace(
   / \+ /g,
-  ' <span class="text-amber">+</span> ',
+  ' <span class="text-amber-light">+</span> ',
 );
 ---
 
 <div
   class:list={[
-    'flex items-center bg-warm-white overflow-hidden [container-type:inline-size]',
+    'flex items-center bg-teal overflow-hidden [container-type:inline-size]',
     size === 'full'
-      ? 'aspect-[16/9] rounded-2xl border border-border px-[7%]'
+      ? 'aspect-[16/9] rounded-2xl px-[7%]'
       : 'w-full h-full px-[6%]',
   ]}
 >
   <h2
     class:list={[
-      'font-black text-text-dark leading-[1.05] [text-wrap:balance] [overflow-wrap:break-word]',
+      'font-black text-white leading-[1.05] [text-wrap:balance] [overflow-wrap:break-word]',
       size === 'full'
         ? 'text-[clamp(22px,8cqi,60px)] tracking-[-1.2px]'
         : 'text-[clamp(14px,7.5cqi,28px)] tracking-[-0.5px]',
